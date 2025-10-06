@@ -1,0 +1,39 @@
+= トラッカー応答サポート
+:allow-uri-read: 
+
+
+
+
+=== トラッカー応答サポート
+
+Tracker は API 応答を提供するようになり、タスクに関連する REST API 出力を確認できるようになりました。
+
+
+
+=== AWS Secrets Manager のリンク認証サポート
+
+AWS Secrets Manager のシークレットを使用してリンクを認証するオプションが追加され、 BlueXPワークロードに保存されている認証情報を使用する必要がなくなりました。
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda リンクを使用して FSx for ONTAPファイルシステムに接続する"]
+
+
+
+=== FSx for ONTAPファイルシステムのベストプラクティスを実装する
+
+BlueXP Workloads は、ファイル システム構成の適切なアーキテクチャの状態を確認できるダッシュボードを提供します。この分析を活用して、FSx for ONTAPファイルシステムのベストプラクティスを実装できます。ファイル システム構成分析には、SSD 容量しきい値、スケジュールされたローカル スナップショット、スケジュールされた FSx for ONTAPバックアップ、データ階層化、リモート データ レプリケーションなどの構成が含まれます。
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["ファイルシステム構成の適切なアーキテクチャ分析について学ぶ"]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["ファイルシステムのベストプラクティスを実装する"]
+
+
+
+
+=== ファイルシステムの問題に対する適切に設計された通知
+
+BlueXPコンソールでは、well-architected の問題のある FSx for ONTAPファイル システムに、ファイル システムに修正すべき問題があることを示す通知がキャンバスに表示されるようになりました。
+
+
+
+=== 権限に関する用語の更新
+
+ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。

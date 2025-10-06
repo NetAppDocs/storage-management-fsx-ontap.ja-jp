@@ -1,0 +1,11 @@
+= iam:SimulatePermissionPolicy 権限の更新
+:allow-uri-read: 
+
+
+
+
+=== iam:SimulatePermissionPolicy 権限の更新
+
+これで、 `iam:SimulatePrincipalPolicy`追加の AWS アカウント認証情報を追加したり、GenAI ワークロードなどの新しいワークロード機能を追加したりするときに、 BlueXPコンソールから権限を取得できます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["権限参照の変更ログ"^]

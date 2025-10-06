@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: requirements/task-setting-up-permissions-fsx.html 
+keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
+summary: FSx for ONTAP作業環境を作成または管理するには、 NetAppコンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetAppコンソールに AWS 認証情報を追加する必要があります。 
+---
+= FSx for ONTAPの権限を設定する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+FSx for ONTAP作業環境を作成または管理するには、 NetAppコンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetAppコンソールに AWS 認証情報を追加する必要があります。
+
+
+
+== AWS認証情報が必要な理由
+
+NetAppコンソールから FSx for ONTAPシステムを作成および管理するには、AWS 認証情報が必要です。新しい AWS 認証情報を作成したり、既存の組織に AWS 認証情報を追加したりできます。認証情報は、 NetAppコンソールから AWS クラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。
+
+資格情報と権限は、 NetApp Workload Factory を介して管理されます。  Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してユーザーがワークロードを最適化できるように設計されたライフサイクル管理プラットフォームです。  NetAppコンソールは、Workload Factory と同じ AWS 認証情報と権限のセットを使用します。
+
+Workload Factory インターフェースは、FSx for ONTAPユーザーに、ストレージ、VMware、データベース、GenAI などのワークロード機能を有効にし、ワークロードの権限を選択するオプションを提供します。  _Storage_ は Workload Factory のストレージ管理機能であり、FSx for ONTAPファイル システムを作成および管理するために有効にして認証情報を追加する必要がある唯一の機能です。
+
+
+
+== タスク概要
+
+Workload Factory のストレージから FSx for ONTAPの新しい認証情報を追加する場合は、どのレベルの権限、つまり _操作モード_ で操作するかを決定する必要があります。FSx for ONTAPファイルシステムなどの AWS リソースを検出してデプロイするには、_読み取り専用_ または _読み取り/書き込み_ 権限が必要です。  FSx for ONTAPは、_読み取り専用_モードまたは_読み取り/書き込み_モードを選択しない限り、_基本_モードで動作します。  _読み取り専用_ は表示権限と同じです。 _読み取り/書き込み_ は操作権限と同じです。link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["動作モードの詳細"] 。
+
+新しい AWS 認証情報と既存の AWS 認証情報は、*認証情報* ページの管理メニューから表示できます。
+
+image:screenshot-netapp-console-administration-credentials.png["NetAppコンソール管理メニューで強調表示された管理メニューと資格情報オプションのスクリーンショット。"]
+
+資格情報を追加するには、次の 2 つの方法があります。
+
+* *手動*: Workload Factory で認証情報を追加しながら、AWS アカウントに IAM ポリシーと IAM ロールを作成します。
+* *自動*: 権限に関する最小限の情報を取得し、CloudFormation スタックを使用して認証情報の IAM ポリシーとロールを作成します。
+
+
+
+
+== アカウントに手動で資格情報を追加する
+
+AWS 認証情報をNetAppコンソールに手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限をアカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。
+
+資格情報の作成には 3 つの部分があります。
+
+* 使用するサービスと権限レベルを選択し、AWS マネジメントコンソールから IAM ポリシーを作成します。
+* AWS マネジメントコンソールから IAM ロールを作成します。
+* NetAppコンソールのワークロードから、名前を入力し、資格情報を追加します。
+
+
+FSx for ONTAP作業環境を作成または管理するには、FSx for ONTAP作業環境の作成に必要な権限をワークロードに付与する IAM ロールの ARN を指定して、 NetAppコンソールでワークロードに AWS 認証情報を追加する必要があります。
+
+.開始する前に
+AWS アカウントにログインするには認証情報が必要です。
+
+.手順
+. NetAppコンソール メニューから、*管理* を選択し、次に *資格情報* を選択します。
+. *組織の資格情報*ページから、*資格情報の追加*を選択します。
+. *Amazon Web Services*、*FSx for ONTAP*、*次へ*の順に選択します。
++
+現在、 NetAppワークロードの *資格情報の追加* ページが表示されています。
+
+. *手動で追加*を選択し、以下の手順に従って_権限設定_の下の 3 つのセクションに入力します。
+
+
+
+
+=== ステップ1: ストレージ機能を選択し、IAMポリシーを作成する
+
+このセクションでは、これらの資格情報の一部として管理するストレージ機能と、ストレージに対して有効にするアクセス許可を選択します。データベース、GenAI、VMware などの他のワークロードを選択することもできます。選択が完了したら、選択したワークロードごとにポリシーのアクセス許可を Codebox からコピーし、AWS アカウント内の AWS マネジメントコンソールに追加してポリシーを作成する必要があります。
+
+.手順
+. *ポリシーの作成* セクションで、これらの資格情報に含める各ワークロード機能を有効にします。  *ストレージ* を有効にして、ファイルシステムを作成および管理します。
++
+後から追加機能を追加できるので、現在展開および管理するワークロードを選択するだけです。
+
+. 権限レベル (読み取り専用または読み取り/書き込み) を選択できるワークロード機能の場合は、これらの資格情報で使用できる権限の種類を選択します。link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["操作モードとも呼ばれる権限について学ぶ"^] 。
+. オプション: ワークロード操作を完了するために必要な AWS アカウント権限があるかどうかを確認するには、[*自動権限チェックを有効にする*] を選択します。チェックを有効にすると、 `iam:SimulatePrincipalPolicy permission`許可ポリシーに従ってください。この権限の目的は、権限の確認のみです。資格情報を追加した後で権限を削除できますが、部分的に成功した操作のリソース作成を防ぎ、必要な手動のリソースクリーンアップを省くために、権限を保持しておくことをお勧めします。
+. Codebox ウィンドウで、最初の IAM ポリシーの権限をコピーします。
++
+ストレージ権限は、次のタブからコピーすることもできます。
+
++
+[role="tabbed-block"]
+====
+.読み取り専用権限
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:Describe*",
+        "fsx:ListTagsForResource",
+        "ec2:Describe*",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+.読み取り/書き込み権限
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:*",
+        "ec2:Describe*",
+        "ec2:CreateTags",
+        "ec2:CreateSecurityGroup",
+        "iam:CreateServiceLinkedRole",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "kms:CreateGrant",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+====
+. 別のブラウザウィンドウを開き、AWS マネジメントコンソールで AWS アカウントにログインします。
+. IAM サービスを開き、*ポリシー* > *ポリシーの作成* を選択します。
+. ファイルの種類として JSON を選択し、手順 3 でコピーした権限を貼り付けて、[次へ] を選択します。
+. ポリシーの名前を入力し、「ポリシーの作成」を選択します。
+. 手順 1 で複数のワークロード機能を選択した場合は、これらの手順を繰り返して、ワークロード権限のセットごとにポリシーを作成します。
+
+
+
+
+=== ステップ2: ポリシーを使用するIAMロールを作成する
+
+このセクションでは、作成した権限とポリシーを含む、Workload Factory が引き受ける IAM ロールを設定します。
+
+.手順
+. AWS マネジメントコンソールで、*ロール > ロールの作成*を選択します。
+. *信頼されたエンティティタイプ*で、*AWS アカウント*を選択します。
++
+.. *別の AWS アカウント* を選択し、ワークロード ユーザー インターフェイスから FSx for ONTAPワークロード管理のアカウント ID をコピーして貼り付けます。
+.. *必須の外部 ID* を選択し、ワークロード ユーザー インターフェースから外部 ID をコピーして貼り付けます。
+
+
+. *次へ*を選択します。
+. [アクセス許可ポリシー] セクションで、以前に定義したすべてのポリシーを選択し、[次へ] を選択します。
+. ロールの名前を入力し、「*ロールの作成*」を選択します。
+. ロール ARN をコピーします。
+. ワークロードの認証情報の追加ページに戻り、*ロールの作成*セクションを展開して、_ロール ARN_ フィールドに ARN を貼り付けます。
+
+
+
+
+=== ステップ3: 名前を入力して資格情報を追加する
+
+最後のステップは、ワークロードの資格情報の名前を入力することです。
+
+.手順
+. ワークロードの資格情報の追加ページで、*資格情報の名前*を展開します。
+. これらの資格情報に使用する名前を入力します。
+. 資格情報を作成するには、[*追加*] を選択します。
+
+
+.結果
+資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetAppコンソールから資格情報を削除したりできます。
+
+
+
+== CloudFormation を使用してアカウントに認証情報を追加する
+
+使用するワークロード機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用してワークロードに AWS 認証情報を追加できます。CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。
+
+.開始する前に
+* AWS アカウントにログインするには認証情報が必要です。
+* CloudFormation スタックを使用して認証情報を追加する場合は、AWS アカウントに次の権限が必要です。
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:ListStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:GetTemplate",
+        "cloudformation:ValidateTemplate",
+        "lambda:InvokeFunction",
+        "iam:PassRole",
+        "iam:CreateRole",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:CreateServiceLinkedRole"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+.手順
+. NetAppコンソール メニューから、*管理* を選択し、次に *資格情報* を選択します。
+. *資格情報の追加*を選択します。
+. *Amazon Web Services*、*FSx for ONTAP*、*次へ*の順に選択します。
++
+現在、 NetAppワークロードの *資格情報の追加* ページが表示されています。
+
+. *AWS CloudFormation 経由で追加*を選択します。
+. *ポリシーの作成* で、これらの資格情報に含める各ワークロード機能を有効にし、各ワークロードのアクセス許可レベルを選択します。
++
+後から追加機能を追加できるので、現在展開および管理するワークロードを選択するだけです。
+
+. オプション: ワークロード操作を完了するために必要な AWS アカウント権限があるかどうかを確認するには、[*自動権限チェックを有効にする*] を選択します。チェックを有効にすると、 `iam:SimulatePrincipalPolicy`権限ポリシーに従って権限を設定します。この権限の目的は、権限の確認のみです。資格情報を追加した後で権限を削除できますが、部分的に成功した操作のリソース作成を防ぎ、必要な手動のリソースクリーンアップを省くために、権限を保持しておくことをお勧めします。
+. *資格情報名*の下に、これらの資格情報に使用する名前を入力します。
+. AWS CloudFormation からの認証情報を追加します。
++
+.. *追加* (または *CloudFormation にリダイレクト*) を選択すると、CloudFormation にリダイレクト ページが表示されます。
+.. AWS でシングルサインオン (SSO) を使用する場合は、別のブラウザタブを開いて AWS コンソールにログインしてから、[続行] を選択してください。
++
+FSx for ONTAPファイルシステムが存在する AWS アカウントにログインする必要があります。
+
+.. 「CloudFormation にリダイレクト」ページから「*続行*」を選択します。
+.. [クイックスタック作成] ページの [機能] で、[*AWS CloudFormation によって IAM リソースが作成される場合があることを承認します] を選択します。
+.. *スタックを作成*を選択します。
+.. メイン メニューから *管理* > *資格情報* ページに戻り、新しい資格情報が処理中であるか、または追加されたことを確認します。
+
+
+
+
+.結果
+資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetAppコンソールから資格情報を削除したりできます。

@@ -1,0 +1,15 @@
+= メンテナンスウィンドウの開始時刻
+:allow-uri-read: 
+
+
+
+
+=== メンテナンスウィンドウの開始時刻
+
+いつlink:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["職場環境の整備"]、メンテナンスが重要なビジネス アクティビティと競合しないように、毎週 30 分間のメンテナンス ウィンドウの開始時刻を指定できます。
+
+
+
+=== FlexGroupsを使用してボリュームデータを分散する
+
+ボリュームを作成するときに、 FlexGroupを作成してボリューム間でデータを分散することにより、データの最適化を有効にすることができます。

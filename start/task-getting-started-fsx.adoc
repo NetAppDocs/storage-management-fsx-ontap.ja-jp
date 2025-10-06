@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: start/task-getting-started-fsx.html 
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create, bluexp 
+summary: 認証情報を追加し、コンソールエージェントまたはリンクを作成し、ファイルシステムを作成または検出することで、 NetAppコンソールでAmazon FSx for NetApp ONTAPの使用を開始します。 
+---
+= Amazon FSx for NetApp ONTAP のクイックスタート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+認証情報を追加し、コンソールエージェントまたはリンクを作成し、ファイルシステムを作成または検出することで、 NetAppコンソールでAmazon FSx for NetApp ONTAPの使用を開始します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:../requirements/task-setting-up-permissions-fsx.html["資格情報と権限を追加する"]
+[role="quick-margin-para"]
+FSx for ONTAPファイルシステムの作成と管理に必要な権限をNetAppコンソールに付与するには、AWS 認証情報を追加する必要があります。  _読み取り専用_権限と_読み取り/書き込み_権限のどちらかを選択できます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]オプション: コンソールエージェントまたはリンクを作成する
+[role="quick-margin-para"]
+NetAppコンソールから一部の管理タスクを実行するには、コンソール エージェントまたはNetAppワークロード リンクが必要です。  _コンソール エージェント_ は、FSx for ONTAPファイル システムを管理するために VPC にデプロイする仮想マシンです。  _link_ は AWS Lambda を活用して、FSx for ONTAPファイルシステムとの信頼関係と接続を作成します。
+
+[role="quick-margin-list"]
+* link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features["FSx for ONTAP管理にコンソール エージェントまたはリンクが必要な場合について説明します。"]
+* https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["AWS でコンソールエージェントを作成する方法を学ぶ"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["オンプレミスでコンソールエージェントを作成する方法を学ぶ"^]
+* https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["リンクを作成する方法を学ぶ"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] link:../use/task-create-fsx-system.html["FSx for ONTAPシステムを作成または検出する"]
+[role="quick-margin-para"]
+NetAppコンソールから FSx for ONTAPファイルシステムを直接作成するか、AWS 環境ですでに作成してあるファイルシステムを検出します。

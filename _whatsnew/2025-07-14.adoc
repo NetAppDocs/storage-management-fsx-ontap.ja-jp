@@ -1,0 +1,11 @@
+= 2 つの FSx for ONTAPファイルシステム間でのデータ複製のサポート
+:allow-uri-read: 
+
+
+
+
+=== 2 つの FSx for ONTAPファイルシステム間でのデータ複製のサポート
+
+BlueXPコンソールのキャンバスから、2 つの FSx for ONTAPファイル システム間でのデータ レプリケーションが利用できるようになりました。
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#replicate-data["データを複製する"]

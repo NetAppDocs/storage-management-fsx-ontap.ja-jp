@@ -1,0 +1,11 @@
+= 3つの追加リージョンのサポート
+:allow-uri-read: 
+
+
+
+
+=== 3つの追加リージョンのサポート
+
+お客様は、欧州 (チューリッヒ)、欧州 (スペイン)、アジアパシフィック (ハイデラバード) の 3 つの新しい AWS リージョンでAmazon FSx for NetApp ONTAPファイルシステムを作成できるようになりました。
+
+参照link:https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-fsx-netapp-ontap-three-regions/#:~:text=Customers%20can%20now%20create%20Amazon,file%20systems%20in%20the%20cloud["Amazon FSx for NetApp ONTAPが新たに 3 つのリージョンで利用可能になりました"^]詳細についてはこちらをご覧ください。

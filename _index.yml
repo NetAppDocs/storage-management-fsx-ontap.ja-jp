@@ -1,0 +1,39 @@
+---
+indexpage:
+  title: Amazon FSx for NetApp ONTAP管理
+  summary: Amazon FSx for NetApp ONTAP は、 ONTAPの全機能をネイティブ AWS マネージドサービスに提供し、一貫したハイブリッドクラウドエクスペリエンスを実現します。このドキュメントでは、
+    NetAppコンソールで FSx for ONTAPを管理する方法について説明します。
+  keywords: amazon, fsx, netapp, ontap, bluexp, create, manage, NetApp Console
+  lead: Amazon FSx for NetApp ONTAP は、 ONTAPの全機能をネイティブ AWS マネージドサービスに提供し、一貫したハイブリッドクラウドエクスペリエンスを実現します。このドキュメントでは、
+    NetAppコンソールで FSx for ONTAPを管理する方法について説明します。
+  tiles:
+  - title: 始めましょう
+    links:
+    - title: リリース ノート
+      url: "/whats-new.html"
+    - title: Amazon FSx for NetApp ONTAPについて学ぶ
+      url: "/start/concept-fsx-aws.html"
+    - title: クイック スタート
+      url: "/start/task-getting-started-fsx.html"
+    - title: システムを作成または発見する
+      url: "/use/task-create-fsx-system.html"
+  - title: ONTAPに FSx を使用する
+    links:
+    - title: FSx for ONTAPファイルシステムを作成する
+      url: "/use/task-create-fsx-system.html"
+    - title: FSx for ONTAPファイルシステムを管理する
+      url: "/use/task-manage-fsx-systems.html"
+  - title: 知識とサポート
+    links:
+    - title: サポートに登録する
+      url: "/support/task-support-registration.html"
+    - title: ヘルプを受ける
+      url: "/support/task-get-help.html"
+  - title: ブログとコミュニティ
+    links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
+    - title: NetAppコミュニティ
+      url: https://community.netapp.com/

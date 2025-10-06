@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: use/task-manage-fsx-systems.html 
+keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console 
+summary: NetAppコンソールで FSx for ONTAPシステムを作成または検出すると、ファイルシステムを管理し、バックアップやリカバリなどの機能を提供するNetAppデータ サービスを使用できるようになります。 
+---
+= NetAppコンソールで FSx for ONTAPファイルシステムを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetAppコンソールで FSx for ONTAPシステムを作成または検出した後、ボリュームの作成、ストレージ VM の管理、データの保護、ファイル システムの管理を行うことで、ファイル システムを管理できます。コンソールを使用すると、バックアップとリカバリ、データ分類、データ同期などの機能を提供するデータ サービスも使用できます。
+
+
+
+== NetAppワークロードを使用してファイルシステムを管理する
+
+NetAppコンソール システム ページから FSx for ONTAPシステムを開くと、 NetAppワークロードが表示されます。  Workloads は、業界のベストプラクティスを使用して、 Amazon FSx for NetApp ONTAPで主要なワークロードを設計、セットアップ、運用するインテリジェントな最適化お​​よび自動化サービスです。
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetAppワークロードを使用してファイルシステムを管理する方法を学びます"^]
+
+
+
+== ONTAP System Managerを使用してファイルシステムを管理する
+
+ONTAP System Manager インターフェイスを使用して、コンソールから FSx for ONTAPファイル システムを直接管理できます。  System Manager を使用するには、コンソール エージェントが必要です。
+
+
+
+== Amazon CloudFormation を使用してファイルシステムを管理する
+
+Amazon CloudFormation を使用して、FSx for ONTAPファイルシステムリソース (ボリューム、CIFS 共有、エクスポートポリシーなど) をプロビジョニングおよび管理できます。
+
+link:https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider["NetApp CloudFormation FSx for ONTAPプロバイダー GitHub リポジトリ"^]
+
+
+
+== ファイルシステムでNetAppデータサービスを使用する
+
+NetAppデータ サービスを FSx for ONTAPファイル システムと共に使用して、データのバックアップとリカバリ、データの転送と同期、データのスキャンと分類、データの複製、アクセスの高速化、トラフィックのオフロードなどを行うことができます。
+
+
+
+=== データのバックアップと復元
+
+NetApp Backup and Recovery は、オンプレミスとクラウドの両方で、 NetApp ONTAPデータ、データベース、仮想マシンに対して効率的で安全かつコスト効率に優れたデータ保護を提供します。
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetAppバックアップとリカバリの使用を開始する"^]
+
+
+
+=== データの転送と同期
+
+NetApp Copy and Sync は、オンプレミスとクラウド オブジェクト ストア間で NAS データを転送するためのクラウド レプリケーションおよび同期サービスです。
+
+link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html["NetAppコピー＆同期を使い始める"^]
+
+
+
+=== データをスキャンして分類する
+
+NetApp Data Classification を使用すると、組織のハイブリッド マルチクラウド全体のデータをスキャンして分類できます。
+
+link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["NetApp Data Classification を使い始める"^]
+
+
+
+=== データを複製する
+
+バックアップと災害復旧をサポートするためにデータを複製します。 FSx for ONTAPファイル システムとCloud Volumes ONTAP間、または FSx for ONTAPファイル システムとオンプレミスのONTAPシステム間のデータ レプリケーションは、 NetApp Replication を使用して実行できます。レプリケーションを使用すると、 ONTAPストレージ システム間でデータを複製して、クラウドまたはクラウド間のバックアップと災害復旧をサポートできます。
+
+link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["NetAppレプリケーションを使い始める"^]
+
+2 つの FSx for ONTAPファイル システム間のデータ レプリケーションは、 NetAppコンソール システム ページから実行できます。
+
+.開始する前に
+始める前に次の点を考慮してください。
+
+* 2 つの FSx for ONTAPファイル システム間でデータを複製するには、ファイル システムに接続できるコネクタを選択するか、ファイル システムを入力してリンクを関連付ける必要があります。
+* 使用可能、作成済み、または誤って構成された状態以外のボリューム、およびONTAPバージョンに互換性がない場合は、レプリケーションはサポートされません。
+
+
+.手順
+. NetAppコンソール システム ページから、ソースの FSx for ONTAPファイル システムをターゲットの FSx for ONTAPファイル システムの上にドラッグし、[レプリケーション] を選択します。
+. レプリケーションの作成ページで、レプリケートするソースボリュームを選択し、[次へ] をクリックします。
+. レプリケーション ターゲットで、次の内容を入力します。
++
+.. *ターゲット名*: キャンバス内でドラッグ アンド ドロップ操作中に以前に選択されたターゲット名です。
+.. *ストレージ VM 名*: ドロップダウン メニューからストレージ VM を選択します。選択したストレージ VM は、このレプリケーション関係で選択されたすべてのボリュームのターゲットになります。
+.. *ボリューム名*: ターゲットボリューム名は次の形式で自動的に生成されます `{OriginalVolumeName}_copy`。自動生成されたボリューム名を使用することも、別のボリューム名を入力することもできます。
+.. *使用ケース*: レプリケーションの次の使用ケースのいずれかを選択します。選択したユースケースに応じて、Workload Factory はベストプラクティスに従って推奨値をフォームに入力します。フォームに入力する際に、推奨値を受け入れることも、変更することもできます。
++
+*** 移行: データをターゲットの FSx for ONTAPファイルシステムに転送します
+*** ホット災害復旧: 重要なワークロードの高可用性と迅速な災害復旧を保証します
+*** コールドまたはアーカイブ災害復旧:
++
+**** コールド災害復旧: より長い復旧時間目標 (RTO) と復旧ポイント目標 (RPO) を使用してコストを削減します。
+**** アーカイブ: 長期保存とコンプライアンスのためにデータを複製します
+
+
+*** その他
++
+さらに、ユースケースの選択によって、レプリケーション ポリシー、またはSnapMirrorポリシー (ONTAP) が決まります。レプリケーションポリシーを説明するために使用される用語は、link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["ONTAP 9 ドキュメント"^] 。
+
++
+**** 移行などの場合、レプリケーション ポリシーは _MirrorAllSnapshots_ と呼ばれます。  _MirrorAllSnapshots_ は、すべてのスナップショットと最新のアクティブなファイルシステムをミラーリングするための非同期ポリシーです。
+**** ホット、コールド、またはアーカイブの災害復旧の場合、レプリケーション ポリシーは _MirrorAndVault_ と呼ばれます。  _MirrorAndVault_ は、最新のアクティブなファイル システムと毎日および毎週のスナップショットをミラーリングするための非同期およびボールト ポリシーです。
++
+すべてのユースケースにおいて、長期保存用にスナップショットを有効にすると、デフォルトのレプリケーション ポリシーは _MirrorAndVault_ になります。
+
+
+
+
+
+.. *階層化ポリシー*: ターゲット ボリュームに保存されているデータの階層化ポリシーを選択します。階層化ポリシーは、選択したユースケースに推奨される階層化ポリシーにデフォルト設定されます。
++
+_バランス (自動)_ は、Workload Factory コンソールを使用してボリュームを作成するときのデフォルトの階層化ポリシーです。ボリューム階層化ポリシーの詳細については、以下を参照してください。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["ボリュームストレージ容量"^] AWS FSx for NetApp ONTAPドキュメント。ワークロード ファクトリーは、ワークロード ファクトリー コンソールで階層化ポリシーにユースケース ベースの名前を使用し、括弧内に FSx for ONTAP階層化ポリシー名を含めることに注意してください。
+
++
+移行ユースケースを選択した場合、Workload Factory はソース ボリュームの階層化ポリシーをターゲット ボリュームにコピーすることを自動的に選択します。階層化ポリシーのコピーの選択を解除し、レプリケーション対象として選択したボリュームに適用する階層化ポリシーを選択できます。
+
+.. *最大転送速度*: *制限* を選択し、最大転送制限を MB/秒単位で入力します。または、「*無制限*」を選択します。
++
+制限がないと、ネットワークとアプリケーションのパフォーマンスが低下する可能性があります。あるいは、災害復旧を主目的として使用するような重要なワークロードの場合、FSx for ONTAPファイル システムに無制限の転送速度を使用することをお勧めします。
+
+
+
+. レプリケーション設定で、次の内容を入力します。
++
+.. *レプリケーション間隔*: スナップショットがソース ボリュームからターゲット ボリュームに転送される頻度を選択します。
+.. *長期保存*: 必要に応じて、長期保存用のスナップショットを有効にします。長期保存により、サイト全体の障害が発生した場合でもビジネス サービスは継続して実行でき、セカンダリ コピーを使用してアプリケーションを透過的にフェールオーバーできます。
++
+長期保存のないレプリケーションでは、_MirrorAllSnapshots_ ポリシーが使用されます。長期保存を有効にすると、レプリケーションに _MirrorAndVault_ ポリシーが割り当てられます。
+
++
+長期保存を有効にする場合は、既存のポリシーを選択するか、新しいポリシーを作成して、複製するスナップショットと保持する数を定義します。
+
++
+
+NOTE: 長期保存には、ソース ラベルとターゲット ラベルの一致が必要です。必要に応じて、ワークロード ファクトリーで不足しているラベルを作成できます。
+
++
+*** *既存のポリシーを選択*: ドロップダウン メニューから既存のポリシーを選択します。
+*** *新しいポリシーを作成*：*ポリシー名*を入力します。
+
+
+.. *不変のスナップショット*: オプション。このポリシーで作成されたスナップショットが保持期間中に削除されないようにするには、「*不変スナップショットを有効にする*」を選択します。
++
+*** *保存期間*を時間、日、月、または年数で設定します。
+*** *スナップショット ポリシー*: 表で、スナップショット ポリシーの頻度と保持するコピーの数を選択します。複数のスナップショット ポリシーを選択できます。
+
+
+
+
+
+
+. *作成*を選択します。
+
+
+
+
+=== アクセスを高速化したりトラフィックをオフロードしたりする
+
+NetAppボリューム キャッシュは、リモートの場所に永続的な書き込み可能なボリュームを提供します。ボリューム キャッシュを使用すると、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりできます。
+
+link:https://docs.netapp.com/us-en/console-volume-caching/get-started/cache-intro.html["NetAppボリュームキャッシングを使い始める"^]
