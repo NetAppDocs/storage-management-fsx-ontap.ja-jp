@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: requirements/task-setting-up-permissions-fsx.html 
 keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
-summary: FSx for ONTAP作業環境を作成または管理するには、 NetAppコンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetAppコンソールに AWS 認証情報を追加する必要があります。 
+summary: FSx for ONTAP作業環境を作成または管理するには、NetApp コンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetApp Consoleに AWS 認証情報を追加する必要がNetApp Console。 
 ---
 = FSx for ONTAPの権限を設定する
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: FSx for ONTAP作業環境を作成または管理するには、 NetApp
 
 
 [role="lead"]
-FSx for ONTAP作業環境を作成または管理するには、 NetAppコンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetAppコンソールに AWS 認証情報を追加する必要があります。
+FSx for ONTAP作業環境を作成または管理するには、NetApp コンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetApp Consoleに AWS 認証情報を追加する必要がNetApp Console。
 
 
 
 == AWS認証情報が必要な理由
 
-NetAppコンソールから FSx for ONTAPシステムを作成および管理するには、AWS 認証情報が必要です。新しい AWS 認証情報を作成したり、既存の組織に AWS 認証情報を追加したりできます。認証情報は、 NetAppコンソールから AWS クラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。
+NetApp Consoleから FSx for ONTAPシステムを作成および管理するには、AWS 認証情報が必要です。新しい AWS 認証情報を作成したり、既存の組織に AWS 認証情報を追加したりできます。認証情報は、NetApp Consoleから AWS クラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。
 
-資格情報と権限は、 NetApp Workload Factory を介して管理されます。  Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してユーザーがワークロードを最適化できるように設計されたライフサイクル管理プラットフォームです。  NetAppコンソールは、Workload Factory と同じ AWS 認証情報と権限のセットを使用します。
+資格情報と権限はNetApp Workload Factoryを介して管理されます。  Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してユーザーがワークロードを最適化できるように設計されたライフサイクル管理プラットフォームです。  NetApp Consoleは、Workload Factory と同じ AWS 認証情報と権限のセットを使用します。
 
 Workload Factory インターフェースは、FSx for ONTAPユーザーに、ストレージ、VMware、データベース、GenAI などのワークロード機能を有効にし、ワークロードの権限を選択するオプションを提供します。  _Storage_ は Workload Factory のストレージ管理機能であり、FSx for ONTAPファイル システムを作成および管理するために有効にして認証情報を追加する必要がある唯一の機能です。
 
@@ -34,7 +34,7 @@ Workload Factory のストレージから FSx for ONTAPの新しい認証情報�
 
 新しい AWS 認証情報と既存の AWS 認証情報は、*認証情報* ページの管理メニューから表示できます。
 
-image:screenshot-netapp-console-administration-credentials.png["NetAppコンソール管理メニューで強調表示された管理メニューと資格情報オプションのスクリーンショット。"]
+image:screenshot-netapp-console-administration-credentials.png["NetApp Console管理メニューで強調表示された管理メニューと資格情報オプションのスクリーンショット。"]
 
 資格情報を追加するには、次の 2 つの方法があります。
 
@@ -46,22 +46,22 @@ image:screenshot-netapp-console-administration-credentials.png["NetAppコンソ�
 
 == アカウントに手動で資格情報を追加する
 
-AWS 認証情報をNetAppコンソールに手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限をアカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。
+AWS 認証情報をNetApp Consoleに手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限をアカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。
 
 資格情報の作成には 3 つの部分があります。
 
 * 使用するサービスと権限レベルを選択し、AWS マネジメントコンソールから IAM ポリシーを作成します。
 * AWS マネジメントコンソールから IAM ロールを作成します。
-* NetAppコンソールのワークロードから、名前を入力し、資格情報を追加します。
+* NetApp Consoleのワークロードから、名前を入力し、資格情報を追加します。
 
 
-FSx for ONTAP作業環境を作成または管理するには、FSx for ONTAP作業環境の作成に必要な権限をワークロードに付与する IAM ロールの ARN を指定して、 NetAppコンソールでワークロードに AWS 認証情報を追加する必要があります。
+FSx for ONTAP作業環境を作成または管理するには、FSx for ONTAP作業環境の作成に必要な権限をワークロードに付与する IAM ロールの ARN を指定して、 NetApp Consoleでワークロードに AWS 認証情報を追加する必要があります。
 
 .開始する前に
 AWS アカウントにログインするには認証情報が必要です。
 
 .手順
-. NetAppコンソール メニューから、*管理* を選択し、次に *資格情報* を選択します。
+. NetApp Consoleメニューから、*管理* を選択し、次に *資格情報* を選択します。
 . *組織の資格情報*ページから、*資格情報の追加*を選択します。
 . *Amazon Web Services*、*FSx for ONTAP*、*次へ*の順に選択します。
 +
@@ -216,13 +216,13 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 .結果
-資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetAppコンソールから資格情報を削除したりできます。
+資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetApp Consoleから資格情報を削除したりできます。
 
 
 
 == CloudFormation を使用してアカウントに認証情報を追加する
 
-使用するワークロード機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用してワークロードに AWS 認証情報を追加できます。CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。
+使用するワークロード機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用してワークロードに AWS 認証情報を追加できます。  CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。
 
 .開始する前に
 * AWS アカウントにログインするには認証情報が必要です。
@@ -262,7 +262,7 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 .手順
-. NetAppコンソール メニューから、*管理* を選択し、次に *資格情報* を選択します。
+. NetApp Consoleメニューから、*管理* を選択し、次に *資格情報* を選択します。
 . *資格情報の追加*を選択します。
 . *Amazon Web Services*、*FSx for ONTAP*、*次へ*の順に選択します。
 +
@@ -291,4 +291,4 @@ FSx for ONTAPファイルシステムが存在する AWS アカウントにロ�
 
 
 .結果
-資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetAppコンソールから資格情報を削除したりできます。
+資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetApp Consoleから資格情報を削除したりできます。

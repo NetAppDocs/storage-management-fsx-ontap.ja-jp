@@ -18,29 +18,29 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["A
 
 
 
-== NetAppコンソール
+== NetApp Console
 
-Amazon FSx for NetApp ONTAP管理には、 NetAppコンソールからアクセスできます。
+Amazon FSx for NetApp ONTAP管理には、NetApp Consoleからアクセスできます。
 
-NetAppコンソールは、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとデータ サービスの集中管理を提供します。NetAppデータ サービスにアクセスして使用するには、コンソールが必要です。管理インターフェースとして、1 つのインターフェースから多数のストレージ リソースを管理できます。コンソール管理者は、企業内のすべてのシステムのストレージとサービスへのアクセスを制御できます。
+NetApp Consoleは、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとデータ サービスの集中管理を提供します。NetAppデータ サービスにアクセスして使用するには、コンソールが必要です。管理インターフェースとして、1 つのインターフェースから多数のストレージ リソースを管理できます。コンソール管理者は、企業内のすべてのシステムのストレージとサービスへのアクセスを制御できます。
 
-NetAppコンソールの使用を開始するためにライセンスやサブスクリプションは必要ありません。ストレージ システムまたはNetAppデータ サービスへの接続を確保するためにクラウドにコンソール エージェントを展開する必要がある場合にのみ料金が発生します。ただし、コンソールからアクセスできる一部のNetAppデータ サービスは、ライセンスまたはサブスクリプションベースです。
+NetApp Consoleの使用を開始するためにライセンスやサブスクリプションは必要ありません。ストレージ システムまたはNetAppデータ サービスへの接続を確保するためにクラウドにコンソール エージェントを展開する必要がある場合にのみ料金が発生します。ただし、コンソールからアクセスできる一部のNetAppデータ サービスは、ライセンスまたはサブスクリプションベースです。
 
-詳細はこちら https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetAppコンソール"]。
+詳細はこちら https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"]。
 
 
 
-== NetAppコンソールから FSx for ONTAPを使用する
+== NetApp Consoleから FSx for ONTAPを使用する
 
-NetAppコンソールのシステム ページから、FSx for ONTAPシステムを作成および検出し、System Manager やその他のNetAppサービスを使用できます。  Amazon FSx for NetApp ONTAPで実行されている FSx for ONTAPシステムとワークロードを管理する場合は、 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetAppワークロード ファクトリー"^] 。
+NetApp Consoleのシステム ページから、FSx for ONTAPシステムを作成および検出し、System Manager やその他のNetAppサービスを使用できます。  Amazon FSx for NetApp ONTAPで実行されている FSx for ONTAPシステムとワークロードを管理する場合は、 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp Workload Factory"^] 。
 
-link:../use/task-creating-fsx-working-environment.html["NetAppコンソールから FSx for ONTAPシステムを作成および検出する方法を学びます"^] 。
+link:../use/task-creating-fsx-working-environment.html["NetApp Consoleから FSx for ONTAPシステムを作成および検出する方法を学びます"^] 。
 
 
 
 == 機能
 
-* ストレージ デバイス、ソフトウェア、バックアップを構成または管理する必要はありません。
+* ストレージ デバイス、ソフトウェア、またはバックアップを構成または管理する必要はありません。
 * CIFS、iSCSI、NFSv3、NFSv4.xのサポート https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html["S3"^]、および SMB v2.0 - v3.1.1 プロトコル。
 * 利用可能な低頻度アクセス (IA) ストレージ層を使用した、低コストで事実上無制限のデータ ストレージ容量。
 * Oracle RAC を含むレイテンシの影響を受けやすいアプリケーションで実行できるように認定されています。
@@ -49,23 +49,23 @@ link:../use/task-creating-fsx-working-environment.html["NetAppコンソールか
 
 
 
-== NetAppコンソールの追加機能
+== NetApp Consoleの追加機能
 
-* FSx for ONTAPは、 NetAppコンソールを _標準_ モードで使用する場合にサポートされ、 NetAppコンソール SaaS レイヤーを活用して完全な機能を提供します。  _制限_ モードと _プライベート_ モードはサポートされていません。
+* FSx for ONTAPは、NetApp Consoleを_標準_ モードで使用する場合にサポートされ、 NetApp ConsoleSaaS レイヤーを活用して完全な機能を提供します。  _制限_ モードと _プライベート_ モードはサポートされていません。
 
 
-参照link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetAppコンソールの展開モード"^]詳細についてはこちらをご覧ください。
+参照link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの展開モード"^]詳細についてはこちらをご覧ください。
 
-* 使用link:https://docs.netapp.com/us-en/console-family/["NetAppコンソール"^]AWS のコンソールエージェントを使用すると、ボリュームの作成と管理、データの複製、FSx for ONTAPとNetAppクラウドサービス ( NetApp Data Classification、 NetApp Copy and Sync など) の統合が可能になります。
+* 使用link:https://docs.netapp.com/us-en/console-family/["NetApp Console"^]AWS のコンソールエージェントを使用すると、ボリュームの作成と管理、データの複製、FSx for ONTAPとNetAppクラウドサービス ( NetApp Data ClassificationやNetApp Copy and Syncなど) の統合を行うことができます。
 * NetApp Data Classification は、人工知能 (AI) を活用したテクノロジーを使用して、データのコンテキストを理解し、FSx for ONTAPアカウント内に存在する機密データを識別するのに役立ちます。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["詳細情報"^] 。
-* NetApp Copy and Sync を使用すると、クラウドまたはオンプレミスの任意のターゲットへのデータ移行を自動化できます。 https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["詳細情報"^]
+* NetApp Copy and Syncを使用すると、クラウドまたはオンプレミスの任意のターゲットへのデータ移行を自動化できます。 https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["詳細情報"^]
 
 
 
 
 == コンソールエージェントとリンクにより、FSx for ONTAPのすべての機能が利用可能になります。
 
-コンソールエージェントとリンクにより、 NetAppコンソールとAmazon FSx for NetApp ONTAP作業環境間の接続と信頼関係が確立されます。コンソールエージェントは、クラウドまたはオンプレミスのネットワークで実行されるNetAppソフトウェアであり、リンクは AWS Lambda を使用してNetAppコードを実行します。コンソールを起動したり、FSx for ONTAPシステムを作成したりするためにコンソール エージェントまたはリンクは必要ありませんが、FSx for ONTAPの機能を最大限に活用するには、コンソール エージェントまたはリンクを使用する必要があります。
+コンソールエージェントとリンクにより、NetApp ConsoleとAmazon FSx for NetApp ONTAP作業環境間の接続と信頼関係が確立されます。コンソールエージェントは、クラウドまたはオンプレミスのネットワークで実行されるNetAppソフトウェアであり、リンクは AWS Lambda を使用してNetAppコードを実行します。コンソールを起動したり、FSx for ONTAPシステムを作成したりするためにコンソール エージェントまたはリンクは必要ありませんが、FSx for ONTAPの機能を最大限に活用するには、コンソール エージェントまたはリンクを使用する必要があります。
 
 次の機能を使用するには、コンソール エージェントまたはリンクが必要です。
 
@@ -94,7 +94,7 @@ link:../use/task-creating-fsx-working-environment.html["NetAppコンソールか
 
 FSx for ONTAPアカウントは、 NetAppではなく AWS によって管理されます。参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP入門ガイド"^]。
 
-AWS のコンソールエージェントまたはリンク、およびNetApp Data Classification やNetApp Copy and Sync などのオプションのデータサービスの使用には、追加のコストがかかります。
+AWS のコンソールエージェントまたはリンク、およびNetApp Data ClassificationやNetApp Copy and Syncなどのオプションのデータサービスの使用には、追加コストがかかります。
 
 
 
@@ -108,4 +108,4 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 
 Amazon FSx for NetApp ONTAPは、AWS ファーストパーティソリューションです。  FSx for ONTAPファイルシステム、インフラストラクチャ、またはこのサービスを使用したソリューションに関連する質問や技術サポートの問題については、AWS マネジメントコンソールのサポートセンターを使用して AWS にサポートケースを開いてください。  「FSx for ONTAP」サービスと適切なカテゴリを選択します。  AWS サポートケースを作成するために必要な残りの情報を提供します。
 
-NetAppコンソールまたはNetAppストレージ ソリューションとサービスに固有の一般的なサポート問題およびテクニカル サポート問題については、 NetApp組織レベルのシリアル番号を使用してNetAppサポート チケットを開くことができます。必要となるのはlink:https://docs.netapp.com/us-en/console-fsx-ontap/support/task-support-registration.html["NetApp組織を登録する"^]サポートを有効にします。
+NetApp ConsoleまたはNetAppストレージ ソリューションとサービスに固有の一般的なサポート問題およびテクニカル サポート問題については、 NetApp組織レベルのシリアル番号を使用してNetAppサポート チケットを開くことができます。必要となるのはlink:https://docs.netapp.com/us-en/console-fsx-ontap/support/task-support-registration.html["NetApp組織を登録する"^]サポートを有効にします。

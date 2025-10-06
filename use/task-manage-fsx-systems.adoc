@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/task-manage-fsx-systems.html 
 keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console 
-summary: NetAppコンソールで FSx for ONTAPシステムを作成または検出すると、ファイルシステムを管理し、バックアップやリカバリなどの機能を提供するNetAppデータ サービスを使用できるようになります。 
+summary: NetApp Consoleで FSx for ONTAPシステムを作成または検出すると、ファイルシステムを管理し、バックアップやリカバリなどの機能を提供するNetAppデータ サービスを使用できるようになります。 
 ---
-= NetAppコンソールで FSx for ONTAPファイルシステムを管理する
+= NetApp Consoleで FSx for ONTAPファイルシステムを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: NetAppコンソールで FSx for ONTAPシステムを作成または検
 
 
 [role="lead"]
-NetAppコンソールで FSx for ONTAPシステムを作成または検出した後、ボリュームの作成、ストレージ VM の管理、データの保護、ファイル システムの管理を行うことで、ファイル システムを管理できます。コンソールを使用すると、バックアップとリカバリ、データ分類、データ同期などの機能を提供するデータ サービスも使用できます。
+NetApp Consoleで FSx for ONTAPシステムを作成または検出した後、ボリュームの作成、ストレージ VM の管理、データの保護、ファイル システムの管理を行うことで、ファイル システムを管理できます。コンソールを使用すると、バックアップとリカバリ、データ分類、データ同期などの機能を提供するデータ サービスも使用できます。
 
 
 
 == NetAppワークロードを使用してファイルシステムを管理する
 
-NetAppコンソール システム ページから FSx for ONTAPシステムを開くと、 NetAppワークロードが表示されます。  Workloads は、業界のベストプラクティスを使用して、 Amazon FSx for NetApp ONTAPで主要なワークロードを設計、セットアップ、運用するインテリジェントな最適化お​​よび自動化サービスです。
+NetApp Consoleシステム ページから FSx for ONTAPシステムを開くと、 NetAppワークロードが表示されます。  Workloads は、業界のベストプラクティスを使用して、 Amazon FSx for NetApp ONTAPで主要なワークロードを設計、セットアップ、運用するインテリジェントな最適化お​​よび自動化サービスです。
 
 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetAppワークロードを使用してファイルシステムを管理する方法を学びます"^]
 
@@ -50,7 +50,7 @@ NetAppデータ サービスを FSx for ONTAPファイル システムと共に�
 
 NetApp Backup and Recovery は、オンプレミスとクラウドの両方で、 NetApp ONTAPデータ、データベース、仮想マシンに対して効率的で安全かつコスト効率に優れたデータ保護を提供します。
 
-link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetAppバックアップとリカバリの使用を開始する"^]
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup and Recoveryの使用を開始する"^]
 
 
 
@@ -58,7 +58,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Net
 
 NetApp Copy and Sync は、オンプレミスとクラウド オブジェクト ストア間で NAS データを転送するためのクラウド レプリケーションおよび同期サービスです。
 
-link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html["NetAppコピー＆同期を使い始める"^]
+link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html["NetApp Copy and Syncを使い始める"^]
 
 
 
@@ -66,17 +66,17 @@ link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html
 
 NetApp Data Classification を使用すると、組織のハイブリッド マルチクラウド全体のデータをスキャンして分類できます。
 
-link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["NetApp Data Classification を使い始める"^]
+link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["NetApp Data Classificationを使い始める"^]
 
 
 
 === データを複製する
 
-バックアップと災害復旧をサポートするためにデータを複製します。 FSx for ONTAPファイル システムとCloud Volumes ONTAP間、または FSx for ONTAPファイル システムとオンプレミスのONTAPシステム間のデータ レプリケーションは、 NetApp Replication を使用して実行できます。レプリケーションを使用すると、 ONTAPストレージ システム間でデータを複製して、クラウドまたはクラウド間のバックアップと災害復旧をサポートできます。
+バックアップと災害復旧をサポートするためにデータを複製します。 FSx for ONTAPファイル システムとCloud Volumes ONTAP間、または FSx for ONTAPファイル システムとオンプレミスのONTAPシステム間のデータ レプリケーションは、 NetApp Replicationを使用して実行できます。レプリケーションを使用すると、 ONTAPストレージ システム間でデータを複製して、クラウドまたはクラウド間のバックアップと災害復旧をサポートできます。
 
-link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["NetAppレプリケーションを使い始める"^]
+link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["NetApp Replicationを使い始める"^]
 
-2 つの FSx for ONTAPファイル システム間のデータ レプリケーションは、 NetAppコンソール システム ページから実行できます。
+2 つの FSx for ONTAPファイル システム間のデータ レプリケーションは、 NetApp Consoleシステム ページから実行できます。
 
 .開始する前に
 始める前に次の点を考慮してください。
@@ -86,7 +86,7 @@ link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-da
 
 
 .手順
-. NetAppコンソール システム ページから、ソースの FSx for ONTAPファイル システムをターゲットの FSx for ONTAPファイル システムの上にドラッグし、[レプリケーション] を選択します。
+. NetApp Consoleシステム ページから、ソースの FSx for ONTAPファイル システムをターゲットの FSx for ONTAPファイル システムの上にドラッグし、[レプリケーション] を選択します。
 . レプリケーションの作成ページで、レプリケートするソースボリュームを選択し、[次へ] をクリックします。
 . レプリケーション ターゲットで、次の内容を入力します。
 +
@@ -166,6 +166,6 @@ NOTE: 長期保存には、ソース ラベルとターゲット ラベルの一
 
 === アクセスを高速化したりトラフィックをオフロードしたりする
 
-NetAppボリューム キャッシュは、リモートの場所に永続的な書き込み可能なボリュームを提供します。ボリューム キャッシュを使用すると、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりできます。
+NetApp Volume Cachingは、リモートの場所に永続的な書き込み可能なボリュームを提供します。ボリューム キャッシュを使用すると、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりできます。
 
-link:https://docs.netapp.com/us-en/console-volume-caching/get-started/cache-intro.html["NetAppボリュームキャッシングを使い始める"^]
+link:https://docs.netapp.com/us-en/console-volume-caching/get-started/cache-intro.html["NetApp Volume Cachingを使い始める"^]

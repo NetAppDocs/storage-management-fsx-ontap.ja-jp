@@ -10,6 +10,6 @@
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html#features["BlueXP workload factoryの FSx for ONTAP機能について学ぶ"^]
 
-ONTAP System Manager を使用して FSx for ONTAPファイルシステムを管理できるようにする _詳細表示_ オプションを探している場合は、作業環境を選択した後、 BlueXPキャンバスからそのオプションを見つけることができるようになりました。
+ONTAP System Manager を使用して FSx for ONTAPファイル システムを管理できるようにする _詳細表示_ オプションを探している場合は、作業環境を選択した後、 BlueXPキャンバスからそのオプションを見つけることができるようになりました。
 
 image:https://raw.githubusercontent.com/NetAppDocs/bluexp-fsx-ontap/main/media/screenshot-system-manager.png["システム マネージャー オプションが表示されている作業環境を選択した後のBlueXPキャンバスの右側のパネルのスクリーンショット。"]

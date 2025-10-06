@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: use/task-monitor-operations.html 
 keywords: monitor jobs, track jobs, monitor, track, NetApp Console, bluexp 
-summary: NetAppコンソールの Tracker を使用して、FSx for ONTAP操作を追跡し、操作の進行状況を監視します。 
+summary: NetApp Consoleの Tracker を使用して、FSx for ONTAP操作を追跡し、操作の進行状況を監視します。 
 ---
-= NetAppコンソールの Tracker を使用して FSx for ONTAP操作を監視する
+= NetApp Consoleの Tracker を使用して FSx for ONTAP操作を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NetAppコンソールの Tracker を使用して、FSx for ONTAP操作の実行を監視および追跡し、ジョブの進行状況を監視します。
+NetApp Consoleの Tracker を使用して、FSx for ONTAP操作の実行を監視および追跡し、ジョブの進行状況を監視します。
 
 .タスク概要
-NetAppコンソールには、ジョブ監視機能の Tracker が用意されており、資格情報、FSx for ONTAP、リンク操作の進行状況とステータスを監視および追跡したり、操作タスクとサブタスクの詳細を確認したり、問題や障害を診断したりできます。
+NetApp Consoleには、ジョブ監視機能の Tracker が用意されており、資格情報、FSx for ONTAP、リンク操作の進行状況とステータスを監視および追跡したり、操作タスクとサブタスクの詳細を確認したり、問題や障害を診断したりできます。
 
 Tracker ではいくつかのアクションが利用できます。ジョブを期間 (過去 24 時間、7 日間、14 日間、または 30 日間)、ワークロード、ステータス、ユーザーでフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブ テーブルを CSV ファイルとしてダウンロードしたりできます。トラッカーはいつでも更新できます。また、失敗した操作をすぐに再試行したり、失敗した操作のパラメータを編集して操作を再試行したりすることもできます。
 
@@ -37,10 +37,10 @@ Tracker は操作に応じて 2 つのレベルの監視をサポートします
 
 == 操作の追跡と監視
 
-Tracker を使用してNetAppコンソールでの操作を追跡および監視します。
+Tracker を使用してNetApp Consoleでの操作を追跡および監視します。
 
 .手順
-. NetAppコンソール メニューから、*ワークロード* を選択し、次に *管理* を選択します。
+. NetApp Consoleメニューから、*ワークロード* を選択し、次に *管理* を選択します。
 . 管理メニューから*トラッカー*を選択します。
 . トラッカーでは、タスクを表示したり、フィルターや検索を使用して結果を絞り込んだりできます。  *CSV エクスポート* を選択して、すべての操作のレポートをダウンロードすることもできます。
 

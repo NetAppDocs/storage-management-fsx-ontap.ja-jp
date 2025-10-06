@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/task-create-fsx-system.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete system, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security, bluexp, NetApp Console 
-summary: NetAppコンソールからボリュームと追加のデータ サービスを追加および管理するには、FSx for ONTAPファイル システムを作成または検出します。 
+summary: NetApp Consoleからボリュームと追加のデータ サービスを追加および管理するには、FSx for ONTAPファイル システムを作成または検出します。 
 ---
 = FSx for ONTAPファイルシステムを作成または検出する
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: NetAppコンソールからボリュームと追加のデータ サー�
 
 
 [role="lead"]
-FSx for ONTAPファイル システムを作成または検出して、 NetAppコンソールからボリュームと追加のデータ サービスを追加および管理します。
+NetApp Consoleからボリュームと追加のデータ サービスを追加および管理するには、FSx for ONTAPファイル システムを作成または検出します。
 
 
 
 == FSx for ONTAPシステムを作成する
 
-最初のステップは、FSx for ONTAPファイル システムを作成することです。  AWSマネジメントコンソールでFSx for ONTAPファイルシステムをすでに作成している場合は、link:task-create-fsx-system.html#discover-an-existing-fsx-for-ontap-file-system["NetAppコンソールを使用して検出する"] 。
+最初のステップは、FSx for ONTAPファイル システムを作成することです。  AWSマネジメントコンソールでFSx for ONTAPファイルシステムをすでに作成している場合は、link:task-create-fsx-system.html#discover-an-existing-fsx-for-ontap-file-system["NetApp Consoleを使用して検出する"] 。
 
 .タスク概要
 ファイル システムを作成すると、ストレージ VM が作成されます。
@@ -28,7 +28,7 @@ FSx for ONTAPファイル システムを作成または検出して、 NetApp�
 .開始する前に
 FSx for ONTAPファイルシステムを作成する前に、次のものが必要です。
 
-* Workload Factory に FSx for ONTAPファイルシステムの作成に必要な権限を与える IAM ロールの ARN。link:../requirements/task-setting-up-permissions-fsx.html["AWSアカウントに権限を付与する方法を学ぶ"^] 。
+* FSx for ONTAPファイルシステムを作成するために必要な権限を Workload Factory に付与する IAM ロールの ARN。link:../requirements/task-setting-up-permissions-fsx.html["AWSアカウントに権限を付与する方法を学ぶ"^] 。
 * FSx for ONTAPインスタンスを作成するリージョンと VPC 情報。
 
 
@@ -36,7 +36,7 @@ FSx for ONTAPファイルシステムを作成する前に、次のものが必�
 
 == FSx for ONTAPファイルシステムを作成する
 
-_クイック作成_ または _高度な作成_ を使用して、FSx for ONTAPファイル システムを作成できます。Codebox で利用可能な REST API、CloudFormation、Terraform などのツールも使用できます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codebox を使って自動化する方法を学ぶ"^] 。
+_クイック作成_ または _高度な作成_ を使用して、FSx for ONTAPファイル システムを作成できます。 Codebox で利用可能な REST API、CloudFormation、Terraform などのツールも使用できます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codebox を使って自動化する方法を学ぶ"^] 。
 
 
 NOTE: CodeboxからTerraformを使用する場合、コピーまたはダウンロードしたコードは `fsxadmin`そして `vsadmin`パスワード。コードを実行するときにパスワードを再入力する必要があります。
@@ -48,7 +48,7 @@ NOTE: CodeboxからTerraformを使用する場合、コピーまたはダウン�
 クイック作成を使用すると、推奨されるベスト プラクティス構成を使用できます。  FSx for ONTAPファイル システムを作成した後、ほとんどの設定を変更できます。
 
 .手順
-. NetAppコンソール メニューから、*ストレージ* を選択し、次に *管理* を選択します。
+. NetApp Consoleメニューから、*ストレージ* を選択し、次に *管理* を選択します。
 . システム ページから *システムの追加* を選択します。
 . 場所として *Amazon Web Services* を選択し、 Amazon FSx for NetApp ONTAPの *新規追加* を選択します。
 . FSx for ONTAPファイル システムの作成ページで、*クイック作成*を選択します。
@@ -61,7 +61,7 @@ NOTE: CodeboxからTerraformを使用する場合、コピーまたはダウン�
 .. *ファイルシステム名*: ファイルシステムの名前を入力します。
 .. *デプロイメント トポロジ*: デプロイメント トポロジを選択します。
 +
-*** スケールアップ トポロジでは、1 つのファイル システムがデータ配布に使用され、データの増加に合わせてサイズを増やすことができます。
+*** スケールアップ トポロジでは、1 つのファイル システムがデータ配布に使用され、データの増加に対応するためにサイズを増やすことができます。
 *** スケールアウト トポロジでは、データの分散に複数のファイル システムが使用されます。
 
 
@@ -114,7 +114,7 @@ AWS Managed Microsoft AD を使用している場合は、AWS Delegated FSx Admi
 .結果
 ファイルシステムを作成した場合、新しい FSx for ONTAP構成が [システム] ページに表示されます。
 
-FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
+FSx for ONTAPファイルシステムは、 NetApp Consoleのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
 
 --
 .高度な作成
@@ -122,7 +122,7 @@ FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロ
 詳細作成では、可用性、セキュリティ、バックアップ、メンテナンスなどのすべての構成オプションを設定します。
 
 .手順
-. NetAppコンソール メニューから、*ストレージ* を選択し、次に *管理* を選択します。
+. NetApp Consoleメニューから、*ストレージ* を選択し、次に *管理* を選択します。
 . システム ページから *システムの追加* を選択します。
 . 場所として *Amazon Web Services* を選択し、 Amazon FSx for NetApp ONTAPの *新規追加* を選択します。
 . FSx for ONTAP の作成ページで、*高度な作成*を選択します。
@@ -135,7 +135,7 @@ FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロ
 .. *ファイルシステム名*: ファイルシステムの名前を入力します。
 .. *デプロイメント トポロジ*: デプロイメント トポロジを選択します。
 +
-*** スケールアップ トポロジでは、1 つのファイル システムがデータ配布に使用され、データの増加に合わせてサイズを増やすことができます。
+*** スケールアップ トポロジでは、1 つのファイル システムがデータ配布に使用され、データの増加に対応するためにサイズを増やすことができます。
 *** スケールアウト トポロジでは、データの分散に複数のファイル システムが使用されます。
 
 
@@ -215,7 +215,7 @@ AWS Managed Microsoft AD を使用している場合は、AWS Delegated FSx Admi
 .結果
 ファイルシステムを作成した場合、新しい FSx for ONTAP構成が [システム] ページに表示されます。
 
-FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
+FSx for ONTAPファイルシステムは、 NetApp Consoleのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
 
 --
 ====
@@ -223,13 +223,13 @@ FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロ
 
 == 既存の FSx for ONTAPファイルシステムを検出する
 
-以前にNetAppコンソールで AWS 認証情報を提供したことがある場合は、[検出可能なシステム] ページから FSx for ONTAPファイルシステムを自動的に検出できます。利用可能なデータ サービスを確認することもできます。
+以前にNetApp Consoleで AWS 認証情報を指定している場合は、 [Discoverable systems]ページから FSx for ONTAPファイルシステムを自動的に検出できます。利用可能なデータ サービスを確認することもできます。
 
 .タスク概要
 FSx for ONTAPファイル システムはアカウント内で 1 回だけ検出し、1 つのワークスペースに接続できます。ファイル システムは後で削除して、別のワークスペースに再度関連付けることができます。
 
 .手順
-. NetAppコンソール メニューから、*ストレージ*、*管理*、*検出可能なシステム*の順に選択します。
+. NetApp Consoleメニューから、*ストレージ*、*管理*、*Discoverable systems*の順に選択します。
 . 検出された FSx for ONTAPファイル システムの数が表示されます。*Discover*を選択します。
 . 1 つまたは複数のファイル システムを選択し、[*検出*] を選択して、それらをシステム ページに追加します。
 
@@ -242,4 +242,4 @@ FSx for ONTAPファイル システムはアカウント内で 1 回だけ検出
 
 ====
 .結果
-コンソールの「システム」ページに、検出された FSx for ONTAPファイル システムが表示されます。 FSx for ONTAPファイルシステムは、 NetAppコンソールのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
+コンソールの「システム」ページに、検出された FSx for ONTAPファイル システムが表示されます。 FSx for ONTAPファイルシステムは、 NetApp Consoleのワークロード、 ONTAP System Manager、AWS CloudFormation など、いくつかの方法で管理できます。。 link:task-manage-fsx-systems.html["FSx for ONTAPファイルシステムを管理する"] 。
