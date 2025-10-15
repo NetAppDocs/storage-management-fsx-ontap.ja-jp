@@ -8,4 +8,4 @@
 
 NetApp は現在、AWS コンソール内で公開されていない高度なONTAPコンポーネントを顧客が利用できる CloudFormation リソースを提供しています。 CloudFormation は、AWS の Infrastructure as Code メカニズムです。レプリケーション関係、CIFS 共有、NFS エクスポート ポリシー、スナップショットなどを作成できます。
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html["CloudFormation を使用してAmazon FSx for NetApp ONTAPファイルシステムを管理する"]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html["CloudFormation を使用してAmazon FSx for NetApp ONTAPファイルシステムを管理する"]

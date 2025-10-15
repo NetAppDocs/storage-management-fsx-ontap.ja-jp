@@ -6,7 +6,7 @@
 
 === メンテナンスウィンドウの開始時刻
 
-いつlink:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["職場環境の整備"]、メンテナンスが重要なビジネス アクティビティと競合しないように、毎週 30 分間のメンテナンス ウィンドウの開始時刻を指定できます。
+いつlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["職場環境の整備"]、メンテナンスが重要なビジネス アクティビティと競合しないように、毎週 30 分間のメンテナンス ウィンドウの開始時刻を指定できます。
 
 
 

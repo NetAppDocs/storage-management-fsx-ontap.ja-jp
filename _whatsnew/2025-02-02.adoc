@@ -8,7 +8,7 @@
 
 2024 年 11 月のBlueXP統合後、新しく作成された FSx for ONTAPファイル システムはBlueXP内の 1 つのワークスペースに関連付けられていませんでした。  FSx for ONTAPファイル システムを作成または検出すると、それらはBlueXPアカウント内の 1 つのワークスペースに関連付けられるようになりました。
 
-ワークスペースに関連付けられていない既存の FSx for ONTAPファイル システムがある場合は、 BlueXPでそれらをワークスペースに関連付けるお手伝いをします。あなたはできるlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html#create-a-case-with-netapp-support["NetAppサポートにケースを作成する"^]BlueXPコンソール内から。サービスとして*Workload Factory*を選択します。
+ワークスペースに関連付けられていない既存の FSx for ONTAPファイル システムがある場合は、 BlueXPでそれらをワークスペースに関連付けるお手伝いをします。あなたはできるlink:https://docs.netapp.com/us-en/console-setup-admin/task-get-help.html#create-a-case-with-netapp-support["NetAppサポートにケースを作成する"^]BlueXPコンソール内から。サービスとして*Workload Factory*を選択します。
 
 
 
@@ -16,7 +16,7 @@
 
 BlueXPキャンバスのワークスペースから FSx for ONTAPファイル システムを削除できるようになりました。この操作により、ファイル システムと 1 つのワークスペースの関連付けが解除され、同じBlueXPアカウント内の別のワークスペースに関連付けることができるようになります。
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.html["BlueXPのワークスペースから FSx for ONTAPファイルシステムを削除する方法を学びます"^]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-remove-filesystem.html["BlueXPのワークスペースから FSx for ONTAPファイルシステムを削除する方法を学びます"]
 
 
 
@@ -24,7 +24,7 @@ link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.h
 
 新しい監視機能である Tracker が、 BlueXP Amazon FSx for NetApp ONTAPで利用可能になりました。  Tracker を使用すると、資格情報、ストレージ、リンク操作の進行状況とステータスを監視および追跡したり、操作タスクとサブタスクの詳細を確認したり、問題や障害を診断したり、失敗した操作のパラメータを編集したり、失敗した操作を再試行したりできます。
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-monitor-operations.html["BlueXPで FSx for ONTAP操作を監視および追跡する方法を学びます"^]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-monitor-operations.html["BlueXPで FSx for ONTAP操作を監視および追跡する方法を学びます"]
 
 
 
