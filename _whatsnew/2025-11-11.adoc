@@ -6,6 +6,6 @@
 
 === オンプレミスのONTAPシステムと FSx for ONTAPファイルシステム間のレプリケーションのサポート
 
-データ レプリケーションは、 NetApp Console内の FSx for ONTAPから、オンプレミスのONTAPシステムと FSx for ONTAPファイル システム間で実行できます。
+NetApp Consoleシステム ページから、オンプレミスのONTAPシステムと FSx for ONTAPファイル システム間のデータ レプリケーションを利用できます。
 
 link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data["データを複製する"]
