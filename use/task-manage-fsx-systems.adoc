@@ -72,21 +72,21 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[
 
 === データを複製する
 
-バックアップと災害復旧をサポートするためにデータを複製します。 FSx for ONTAPファイル システムとCloud Volumes ONTAP間、または FSx for ONTAPファイル システムとオンプレミスのONTAPシステム間のデータ レプリケーションは、 NetApp Replicationを使用して実行できます。レプリケーションを使用すると、 ONTAPストレージ システム間でデータを複製して、クラウドまたはクラウド間のバックアップと災害復旧をサポートできます。
+バックアップと災害復旧をサポートするためにデータを複製します。FSx for ONTAPファイル システムとCloud Volumes ONTAP間のデータ レプリケーションは、 NetApp Replication を使用して実行できます。レプリケーションを使用すると、 ONTAPストレージ システム間でデータを複製して、クラウドまたはクラウド間のバックアップと災害復旧をサポートできます。
 
 link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["NetApp Replicationを使い始める"^]
 
-2 つの FSx for ONTAPファイル システム間のデータ レプリケーションは、 NetApp Consoleシステム ページから実行できます。
+2 つの FSx for ONTAPファイル システム間、およびオンプレミスのONTAPシステムと FSx for ONTAPファイル システム間のデータ レプリケーションは、 NetApp Consoleのシステム ページから実行できます。
 
 .開始する前に
 始める前に次の点を考慮してください。
 
-* 2 つの FSx for ONTAPファイル システム間でデータを複製するには、ファイル システムに接続できるコネクタを選択するか、ファイル システムを入力してリンクを関連付ける必要があります。
+* 2 つの FSx for ONTAPファイル システム間、またはオンプレミスのONTAPシステムと FSx for ONTAPファイル システム間でデータを複製するには、ファイル システムに接続できるコンソール エージェントを選択するか、ファイル システムを入力してリンクを関連付ける必要があります。
 * 使用可能、作成済み、または誤って構成された状態以外のボリューム、およびONTAPバージョンに互換性がない場合は、レプリケーションはサポートされません。
 
 
 .手順
-. NetApp Consoleシステム ページから、ソースの FSx for ONTAPファイル システムをターゲットの FSx for ONTAPファイル システムの上にドラッグし、[レプリケーション] を選択します。
+. NetApp Consoleシステム ページから、ソースの FSx for ONTAPファイル システムまたはオンプレミスのONTAPシステムをターゲットの FSx for ONTAPファイル システムの上にドラッグし、[レプリケーション] を選択します。
 . レプリケーションの作成ページで、レプリケートするソースボリュームを選択し、[次へ] をクリックします。
 . レプリケーション ターゲットで、次の内容を入力します。
 +
