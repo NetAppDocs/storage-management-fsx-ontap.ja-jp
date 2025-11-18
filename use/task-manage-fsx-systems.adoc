@@ -28,7 +28,9 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetAppワークロ�
 
 == ONTAP System Managerを使用してファイルシステムを管理する
 
-ONTAP System Manager インターフェイスを使用して、コンソールから FSx for ONTAPファイル システムを直接管理できます。  System Manager を使用するには、コンソール エージェントが必要です。
+ONTAP System Manager インターフェイスを使用して、コンソールから FSx for ONTAPファイル システムを直接管理できます。System Manager を使用するには、コンソールエージェントまたは AWS Lambda リンクが必要です。
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンクの使用について学ぶ"^]
 
 
 

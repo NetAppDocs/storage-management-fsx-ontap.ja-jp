@@ -1,0 +1,9 @@
+= AWS Lambda リンクを使用する場合に利用できる System Manager
+:allow-uri-read: 
+
+
+
+
+=== AWS Lambda リンクを使用する場合に利用できる System Manager
+
+ONTAP System Manager インターフェイスを AWS Lambda リンクと組み合わせて使用​​すると、高度なONTAP操作を実行できます。これにより、System Manager でコンソール エージェントを使用する代わりに、コンソールから直接 FSx for ONTAPファイル システムを管理できるようになります。 link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["高度なONTAP操作のためのリンクの使用について学習します"^]
