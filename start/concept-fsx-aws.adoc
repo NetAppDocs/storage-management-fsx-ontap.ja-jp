@@ -34,7 +34,7 @@ NetApp Consoleの使用を開始するためにライセンスやサブスクリ
 
 NetApp Consoleのシステム ページから、FSx for ONTAPシステムを作成および検出し、System Manager やその他のNetAppサービスを使用できます。  Amazon FSx for NetApp ONTAPで実行されている FSx for ONTAPシステムとワークロードを管理する場合は、 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp Workload Factory"^] 。
 
-link:../use/task-creating-fsx-working-environment.html["NetApp Consoleから FSx for ONTAPシステムを作成および検出する方法を学びます"^] 。
+link:../use/task-create-fsx-system.html["NetApp Consoleから FSx for ONTAPシステムを作成および検出する方法を学びます"]。
 
 
 
