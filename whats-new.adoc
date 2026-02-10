@@ -18,6 +18,18 @@ FSx for ONTAPの新機能について学びます。
 
 
 
+== 2026年2月9日
+
+
+
+=== Cloud Volumes ONTAP と FSx for ONTAP 間でのデータレプリケーションのサポート
+
+Cloud Volumes ONTAP システムと Amazon FSx for NetApp ONTAP ファイル システム間のデータ レプリケーションが、NetApp Console から利用できるようになりました。
+
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replicate-data.html["データを複製する"]
+
+
+
 == 2025年11月17日
 
 
