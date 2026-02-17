@@ -483,7 +483,6 @@
   <block id="4445ca9504f7ce2f198006088a6a0db6" category="paragraph">NetApp Data Classification を使用すると、組織のハイブリッド マルチクラウド全体のデータをスキャンして分類できます。</block>
   <block id="9d79f74e1dd8a7371bdf2a808029dff7" category="inline-link-macro">NetApp Data Classificationを使い始める</block>
   <block id="ce269f36061333cca0642955f85d7893" category="paragraph"><block ref="ce269f36061333cca0642955f85d7893" category="inline-link-macro-rx"></block></block>
-  <block id="513c180c5d2a9ee1b68bcde16bb98445" category="paragraph">始める前に次の点を考慮してください。</block>
   <block id="9793db8d97a651febf9f052b60487a84" category="list-text">レプリケーションの作成ページで、レプリケートするソースボリュームを選択し、[次へ] をクリックします。</block>
   <block id="5bc67df36eab9c2f7b3c55d3f683100e" category="list-text">レプリケーション ターゲットで、次の内容を入力します。</block>
   <block id="562c87a680d962135f8e44bc0d159259" category="list-text">*ストレージ VM 名*: ドロップダウン メニューからストレージ VM を選択します。選択したストレージ VM は、このレプリケーション関係で選択されたすべてのボリュームのターゲットになります。</block>
@@ -724,11 +723,8 @@
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">これはシステムによって生成されたIDで、お客様のメールアドレスにマッピングされます。*NSS管理*ページの<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>メニューからメールアドレスを表示できます。</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">ログイン資格情報トークンを更新する必要がある場合は、<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> メニューに*資格情報の更新*オプションもあります。</block>
   <block id="e637038fd567011a59fd1e7148bf1b4f" category="paragraph">NetApp Console の Systems ページから FSx for ONTAP システムを開くと、NetApp Workloads が表示されます。Workloads は、業界のベストプラクティスを使用して、Amazon FSx for NetApp ONTAP を使用した主要なワークロードの計画、プロビジョニング、運用を行うインテリジェントな最適化および自動化サービスです。</block>
-  <block id="255ed45341071970ff67a5a94aa268d9" category="doc">NetApp ConsoleでFSx for ONTAPデータをレプリケートする</block>
   <block id="a374db47ec4f6c8b0b47234eb4f19712" category="paragraph">データが保存されている地域で災害が発生した場合に、データの損失を防ぐためにデータを複製します。データレプリケーションは、Amazon FSx for NetApp ONTAPファイルシステムとオンプレミスONTAPシステムまたはCloud Volumes ONTAP間でサポートされています。</block>
-  <block id="e481f3e818c1bf548144dff8b6c46360" category="paragraph">この操作は、FSx for ONTAP ファイルシステム、オンプレミス ONTAP システム、または Cloud Volumes ONTAP システムのソースボリュームのレプリケーション関係を作成します。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">ターゲット ファイル システム内の複製されたボリュームはデータ保護（DP）ボリュームであり、次の命名形式に従います：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block></block>
-  <block id="329f7e1b4e95f05da5f05e33ca7af05a" category="list-text">FSx for ONTAP とオンプレミス ONTAP または Cloud Volumes ONTAP 間でデータを複製するには、ファイル システムに接続できる Console エージェントを選択するか、リンクを関連付けるファイル システムを入力する必要があります。<block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">使用可能、作成済み、または構成ミス以外の状態のボリュームではレプリケーションはサポートされません。また、ONTAP バージョンに互換性がない場合もサポートされません。</block>
   <block id="96ba6e4ef9df4a236ca029bbe4504ef8" category="list-text">NetApp Console の Systems ページから、ソース FSx for ONTAP ファイル システム、オンプレミス ONTAP システム、または Cloud Volumes ONTAP システムをターゲット FSx for ONTAP ファイル システムの上にドラッグし、*レプリケーション*を選択します。</block>
   <block id="af523b162a02562eeefa105871379e55" category="list-text">*ターゲット名*：ソース ストレージ システムをコンソール システム ページのターゲット システムにドラッグアンドドロップしたときに適用したターゲット名。</block>
@@ -742,4 +738,58 @@
   <block id="caabcc888415814c29639d089816b5fa" category="list-text">*メタデータを有効にする*：メタデータを有効にすると、S3 アクセス ポイントからアクセスできるすべてのオブジェクトを含む S3 テーブルが作成され、監査、ガバナンス、自動、分析、最適化に使用できるようになります。メタデータを有効にすると追加の AWS コストが発生します。詳細については、<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="56573dfcf7d1ac3cf78f2423725ccce8" category="list-text">*S3 アクセス ポイント タグ*：オプションで、最大 50 個のタグを追加できます。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026年2月9日</block>
+  <block id="5d8caeaede63e2cdba6715a163d09892" category="doc">ストレージVM移行のサポート</block>
+  <block id="353d7ff4a3d58ad1fe8ef0ad6acab574" category="paragraph">NetApp Workload Factory は、ストレージ VM の移行をサポートするようになりました。この機能により、オンプレミス ONTAP システムまたは第一世代の FSx for ONTAP ファイルシステムから第二世代の FSx for ONTAP ファイルシステムへ、ONTAP ストレージシステムのデータと構成を移行できます。ストレージ VM のデータと構成設定を複製して、ダウンタイムとユーザーおよびアプリケーションの中断を最小限に抑えながら新しいファイルシステムに移動できます。</block>
+  <block id="fb2a77c6756f10fcc139a51a83349d7f" category="inline-link-macro">レプリケーション関係を作成する</block>
+  <block id="33039f37667143e740ae3514cd2b2eea" category="inline-link-macro">ストレージVMとその複製ボリュームをカットオーバーする</block>
+  <block id="e6dbc21f7dea944e6aaaaa4c0d56159d" category="paragraph">この機能を使用するには、<block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block>ユースケースとして*Migration*を選択します。移行プロセスを完了するには、<block ref="4fbf2906eb98c7c630a3491ffc2b8863" category="inline-link-macro-rx"></block>データとStorage VM構成設定をターゲットのFSx for ONTAPファイルシステムに永続的に移行する必要があります。</block>
+  <block id="a26acefb7c797c670c1c39de1408d5d6" category="doc">NetApp ConsoleでFSx for ONTAPにデータを複製</block>
+  <block id="f009487bcbb1861316ff956fce5c3ac3" category="paragraph">ストレージ VM の移行では、レプリケーション関係を作成した直後にカットオーバー操作を完了する必要があります。</block>
+  <block id="1b8db2e8955b459973ea9bfe988b7384" category="paragraph">レプリケーションは、地域災害からデータを保護し、ストレージ VM の移行をサポートします。</block>
+  <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">ボリュームを作成する</block>
+  <block id="0d2b6b8037148b2d54a1cf8b887418e7" category="paragraph">不変のファイルを含むソース ボリュームを複製する場合、ターゲット ボリュームとファイル システムは、ソース ボリュームの保持期間が終了するまでロックされたままになります。不変ファイル機能は、FSx for ONTAP ファイルシステムの<block ref="88d66b8875f0ded07f2f44fb2e4b70e3" category="inline-link-macro-rx"></block>ときに使用できます。</block>
+  <block id="30965461c316b499ed01c7f92f651051" category="list-text">iSCSI または NVMe プロトコルを使用するブロック ボリュームでは、レプリケーションはサポートされていません。</block>
+  <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">カスケードレプリケーション</block>
+  <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="list-text">1つのソース（読み取り / 書き込み）ボリュームまたは1つのデータ保護（DP）ボリュームを複製できます。カスケードレプリケーションはサポートされていますが、3番目のホップはサポートされていません。<block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="ed5b7e4aa04c57efe98d70f7ef15379d" category="section-title">移行のユースケース</block>
+  <block id="943bab906fe3e90d4f3eb004f330f122" category="paragraph">移行ユースケースを選択する場合、オプションで、単一のストレージVMのストレージVMデータと構成設定を複製することを選択できます。データと構成設定を同時に移行する場合は、ボリュームの最後のレプリケーションが過去24時間以内に完了していることを確認してください。この機能を使用するには、同じストレージVM内のすべてのボリュームを選択する必要があります。すべてのボリュームの階層化ポリシーは、移行ユースケースに推奨されるソースボリュームの階層化ポリシーにデフォルト設定されます。</block>
+  <block id="1666b76635bd7b8ba7032286416076a1" category="paragraph">Workload Factory は、次のストレージシステム間の移行レプリケーションをサポートしています。</block>
+  <block id="c9bc20a670a5e3835c0109ab8efaf03d" category="list-text">オンプレミスONTAPシステムとFSx for ONTAPファイルシステム</block>
+  <block id="355385ffc49e40e0caaabbd4b1ef6737" category="list-text">Cloud Volumes ONTAP および FSx for ONTAP ファイルシステム</block>
+  <block id="507884c25618fc114f4becd877e50dd8" category="list-text">FSx for ONTAPおよびFSx for ONTAPファイルシステム</block>
+  <block id="811a8960cadc3b9f9379096dc8b6b831" category="list-text">第 1 世代から第 1 世代</block>
+  <block id="023f8d09179a05ce990eeb5697e1ecd6" category="list-text">第 1 世代から第 2 世代</block>
+  <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第2世代から第2世代</block>
+  <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">ストレージ VM データと構成設定を移行するには、2 つの操作を完了する必要があります。</block>
+  <block id="ca0c3dd7dca9f636af3209d526098e1e" category="inline-xref">レプリケーション関係の作成</block>
+  <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>、ユースケースとして*Migration*を選択し、*Replicate storage VM configuration*を選択します。</block>
+  <block id="db529797694203560d43ab415a6dd52d" category="inline-xref">カットオーバーレプリケーション</block>
+  <block id="4ff5e77c5ed7650b96676675b9d3eb18" category="list-text"><block ref="76a1fb9977d9fe48f9a1edf04990b3a3" category="inline-xref-macro-rx"></block>ソースファイルシステムからターゲットのFSx for ONTAPファイルシステムにデータと構成設定を永続的に移行します。</block>
+  <block id="c7e68f063ccf0d86162e4964cc1abdf0" category="paragraph">この機能を使用するには、</block>
+  <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">2つのFSx for ONTAPファイルシステム間、オンプレミスONTAPシステムとFSx for ONTAPファイルシステム間、またはCloud Volumes ONTAPとFSx for ONTAPファイルシステム間でデータを複製します。</block>
+  <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">開始する前に、これらの要件を確認してください。</block>
+  <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">既存のリンクを関連付ける方法、または新しいリンクを作成して関連付ける方法を学びます</block>
+  <block id="b3b30d7a6ed8c780ecba9bd7ce8c2400" category="list-text">FSx for ONTAP とオンプレミス ONTAP または Cloud Volumes ONTAP 間でデータをレプリケートするには、ファイルシステムへのリンクを関連付ける必要があります。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。リンクを関連付けた後、この操作に戻ってください。</block>
+  <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">オンプレミス ONTAP システムから FSx for ONTAP ファイルシステムへのレプリケーションの場合は、オンプレミス ONTAP システムが検出されていることを確認してください。</block>
+  <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">移行のユースケースでは、ストレージ VM のデータおよび設定とのレプリケーション関係を作成する前に、ボリュームの最後のレプリケーションが過去 24 時間以内に完了していることを確認してください。</block>
+  <block id="876ae080bad2795906c16db5a7bfc488" category="paragraph">* ストレージ VM 構成のレプリケート * ：オプションで、単一のストレージ VM のストレージ VM データと構成設定をレプリケートするように選択します。データと構成設定を同時に移行する場合は、ボリュームの最後のレプリケーションが過去 24 時間以内に完了していることを確認してください。この機能を使用するには、同じストレージ VM 内のすべてのボリュームを選択する必要があります。すべてのボリュームの階層化ポリシーは、移行のユースケースに推奨されるソースボリュームの階層化ポリシーにデフォルト設定されます。</block>
+  <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">レプリケーション関係は、ターゲットのFSx for ONTAPファイルシステムの*レプリケーション関係*タブに表示されます。</block>
+  <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">移行のためにレプリケーション関係を作成した場合は、ストレージ VM のデータと構成設定をターゲットの FSx for ONTAP ファイルシステムに移行するために、すべてのボリュームとそれに関連付けられたストレージ VM をカットオーバーする必要があります。</block>
+  <block id="f2ce5ba0f770aa8ae822f79404813d99" category="section-title">移行ユースケースのカットオーバーレプリケーション</block>
+  <block id="794cfa9c47742057e71b100968214bfd" category="paragraph">移行ユースケースのレプリケーション関係を作成した後、ストレージVMデータと構成設定をターゲットのFSx for ONTAPファイルシステムに移行するには、レプリケーションをカットオーバーする必要があります。カットオーバーレプリケーションは、データとストレージVMの構成設定をソースファイルシステムからターゲットのFSx for ONTAPファイルシステムに永続的に移行します。カットオーバー中に、データが最後に複製されます。カットオーバーが完了すると、システムはソースボリュームを削除します。この操作を元に戻すことはできません。</block>
+  <block id="aed0e194718db8e0128d88b14756819e" category="list-text">レプリケーションを切り替える前に、ストレージ VM へのクライアントアクセスをすべて停止します。</block>
+  <block id="782b2627ed10262abe4e368b33d508dc" category="list-text">レプリケーションを切り替える前に、すべてのソースボリュームがデータを提供していないことを確認してください。</block>
+  <block id="dda7c50cacac64812ef938f4d803c3a5" category="list-text">レプリケーションを切り替える前に、ソースボリュームとターゲットボリューム間でデータが同期されていることを確認します。</block>
+  <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">レプリケーション関係に使用する FSx for ONTAP ファイル システムには、関連付けられたリンクが必要です。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。リンクを関連付けたら、この操作に戻ります。</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。</block>
+  <block id="632b6c618f57f392aa00db7fb78d681a" category="list-text">NetApp コンソールで、メニュー<block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block>を選択し、*ストレージ*を選択します。</block>
+  <block id="c9183e42d9edf5bc557a95d0fcd830f8" category="list-text">ストレージメニューから、* FSx for ONTAP *を選択します。</block>
+  <block id="292198e01fad7795066f40b6fec350fd" category="list-text">*FSx for ONTAP*から、レプリケートするボリュームを含むファイルシステムを選択します。</block>
+  <block id="bc9c958c3279391522e702151359608b" category="list-text">* レプリケーション関係 * タブを選択します。</block>
+  <block id="23c1b911bea8dc9e9cdd65d07a7745ca" category="list-text">レプリケーション関係テーブルで、切り替えるレプリケーション関係を選択し、*レプリケーションの切り替え*を選択します。</block>
+  <block id="e4d846e7cde6ab6686b9817d81bc55f6" category="list-text">カットオーバーレプリケーションダイアログの情報を確認し、_cut over_ と入力して確定します。</block>
+  <block id="882f34227a47a95827c88036c610642f" category="list-text">*カットオーバー* を選択します。</block>
+  <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">階層化ポリシーを変更する</block>
+  <block id="cdefdf2807f30b87eddcd4e17418772a" category="paragraph">カットオーバー後、ソースボリュームは削除され、ターゲットボリュームは読み取り / 書き込みになります。カットオーバー後、ターゲットボリュームに対して<block ref="16bce6d1c351d0b9dcc239287b000317" category="inline-link-macro-rx"></block>できます。</block>
+  <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026年2月16日</block>
 </blocks>
