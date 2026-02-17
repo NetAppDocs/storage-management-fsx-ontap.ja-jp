@@ -742,7 +742,6 @@
   <block id="353d7ff4a3d58ad1fe8ef0ad6acab574" category="paragraph">NetApp Workload Factory は、ストレージ VM の移行をサポートするようになりました。この機能により、オンプレミス ONTAP システムまたは第一世代の FSx for ONTAP ファイルシステムから第二世代の FSx for ONTAP ファイルシステムへ、ONTAP ストレージシステムのデータと構成を移行できます。ストレージ VM のデータと構成設定を複製して、ダウンタイムとユーザーおよびアプリケーションの中断を最小限に抑えながら新しいファイルシステムに移動できます。</block>
   <block id="fb2a77c6756f10fcc139a51a83349d7f" category="inline-link-macro">レプリケーション関係を作成する</block>
   <block id="33039f37667143e740ae3514cd2b2eea" category="inline-link-macro">ストレージVMとその複製ボリュームをカットオーバーする</block>
-  <block id="e6dbc21f7dea944e6aaaaa4c0d56159d" category="paragraph">この機能を使用するには、<block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block>ユースケースとして*Migration*を選択します。移行プロセスを完了するには、<block ref="4fbf2906eb98c7c630a3491ffc2b8863" category="inline-link-macro-rx"></block>データとStorage VM構成設定をターゲットのFSx for ONTAPファイルシステムに永続的に移行する必要があります。</block>
   <block id="a26acefb7c797c670c1c39de1408d5d6" category="doc">NetApp ConsoleでFSx for ONTAPにデータを複製</block>
   <block id="f009487bcbb1861316ff956fce5c3ac3" category="paragraph">ストレージ VM の移行では、レプリケーション関係を作成した直後にカットオーバー操作を完了する必要があります。</block>
   <block id="1b8db2e8955b459973ea9bfe988b7384" category="paragraph">レプリケーションは、地域災害からデータを保護し、ストレージ VM の移行をサポートします。</block>
@@ -763,8 +762,6 @@
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">ストレージ VM データと構成設定を移行するには、2 つの操作を完了する必要があります。</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="inline-xref">レプリケーション関係の作成</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>、ユースケースとして*Migration*を選択し、*Replicate storage VM configuration*を選択します。</block>
-  <block id="db529797694203560d43ab415a6dd52d" category="inline-xref">カットオーバーレプリケーション</block>
-  <block id="4ff5e77c5ed7650b96676675b9d3eb18" category="list-text"><block ref="76a1fb9977d9fe48f9a1edf04990b3a3" category="inline-xref-macro-rx"></block>ソースファイルシステムからターゲットのFSx for ONTAPファイルシステムにデータと構成設定を永続的に移行します。</block>
   <block id="c7e68f063ccf0d86162e4964cc1abdf0" category="paragraph">この機能を使用するには、</block>
   <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">2つのFSx for ONTAPファイルシステム間、オンプレミスONTAPシステムとFSx for ONTAPファイルシステム間、またはCloud Volumes ONTAPとFSx for ONTAPファイルシステム間でデータを複製します。</block>
   <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">開始する前に、これらの要件を確認してください。</block>
@@ -792,4 +789,6 @@
   <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">階層化ポリシーを変更する</block>
   <block id="cdefdf2807f30b87eddcd4e17418772a" category="paragraph">カットオーバー後、ソースボリュームは削除され、ターゲットボリュームは読み取り / 書き込みになります。カットオーバー後、ターゲットボリュームに対して<block ref="16bce6d1c351d0b9dcc239287b000317" category="inline-link-macro-rx"></block>できます。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026年2月16日</block>
+  <block id="498aaff0cc400a96455ebb5b21ae7ffa" category="paragraph">この機能を使用するには、<block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block>ユースケースとして*Migration*を選択します。移行プロセスを完了するには、<block ref="26b59663dcf673cfcdf7f1e6b23597f9" category="inline-link-macro-rx"></block>データとStorage VM構成設定をターゲットのFSx for ONTAPファイルシステムに永続的に移行する必要があります。</block>
+  <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block>ソースファイルシステムからターゲットのFSx for ONTAPファイルシステムにデータと構成設定を永続的に移行します。</block>
 </blocks>
