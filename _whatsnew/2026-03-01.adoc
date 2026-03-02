@@ -1,0 +1,9 @@
+= NetApp ConsoleエージェントステータスがFSx for ONTAPファイルシステムでサポートされました
+:allow-uri-read: 
+
+
+
+
+=== NetApp ConsoleエージェントステータスがFSx for ONTAPファイルシステムでサポートされました
+
+NetApp ConsoleにWorkloads内のFSx for ONTAPファイルシステムのConsoleエージェントステータスが表示されるようになりました。このステータスは、エージェントが実行中であり、FSx for ONTAPファイルシステムと通信できるかどうかを示します。この情報は、接続の問題のトラブルシューティングに役立ちます。
