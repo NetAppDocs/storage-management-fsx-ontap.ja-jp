@@ -735,7 +735,6 @@
   <block id="ce5abe58cc3ff0993fa9e0b2c6ad1340" category="list-text">*ユーザー タイプ*：ユーザー タイプとして *UNIX* または *Windows* を選択します。</block>
   <block id="acbb57d15a35fb35e9bb5b030da0d855" category="list-text">*ネットワーク構成*：*インターネット* または *仮想プライベート クラウド (VPC)* を選択します。選択するネットワークの種類によって、アクセス ポイントがインターネットからアクセスできるか、特定の VPC に制限されるかが決まります。</block>
   <block id="6c7b2c1264a7189632e27a922b67c8b7" category="inline-link-macro">Amazon S3 価格設定ドキュメント</block>
-  <block id="caabcc888415814c29639d089816b5fa" category="list-text">*メタデータを有効にする*：メタデータを有効にすると、S3 アクセス ポイントからアクセスできるすべてのオブジェクトを含む S3 テーブルが作成され、監査、ガバナンス、自動、分析、最適化に使用できるようになります。メタデータを有効にすると追加の AWS コストが発生します。詳細については、<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="56573dfcf7d1ac3cf78f2423725ccce8" category="list-text">*S3 アクセス ポイント タグ*：オプションで、最大 50 個のタグを追加できます。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026年2月9日</block>
   <block id="5d8caeaede63e2cdba6715a163d09892" category="doc">ストレージVM移行のサポート</block>
@@ -762,7 +761,6 @@
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">ストレージ VM データと構成設定を移行するには、2 つの操作を完了する必要があります。</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="inline-xref">レプリケーション関係の作成</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>、ユースケースとして*Migration*を選択し、*Replicate storage VM configuration*を選択します。</block>
-  <block id="c7e68f063ccf0d86162e4964cc1abdf0" category="paragraph">この機能を使用するには、</block>
   <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">2つのFSx for ONTAPファイルシステム間、オンプレミスONTAPシステムとFSx for ONTAPファイルシステム間、またはCloud Volumes ONTAPとFSx for ONTAPファイルシステム間でデータを複製します。</block>
   <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">開始する前に、これらの要件を確認してください。</block>
   <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">既存のリンクを関連付ける方法、または新しいリンクを作成して関連付ける方法を学びます</block>
@@ -794,4 +792,6 @@
   <block id="3acecbd4317d789f549785c17e6afb2c" category="doc">NetApp ConsoleエージェントステータスがFSx for ONTAPファイルシステムでサポートされました</block>
   <block id="5088f4e07e6650891b34cd38ec19877b" category="paragraph">NetApp ConsoleにWorkloads内のFSx for ONTAPファイルシステムのConsoleエージェントステータスが表示されるようになりました。このステータスは、エージェントが実行中であり、FSx for ONTAPファイルシステムと通信できるかどうかを示します。この情報は、接続の問題のトラブルシューティングに役立ちます。</block>
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026年3月1日</block>
+  <block id="3d8f5698e4ea8cae76ec64ff32d1aa8a" category="list-text">人工知能（AI）と機械学習（ML）：オンプレミスの ONTAP データを FSx for ONTAP にレプリケートし、クラウドでの AI と ML のトレーニングをサポートする S3 アクセスポイントを作成します</block>
+  <block id="911879fb512486e8b5af8019b65a8205" category="list-text">*インベントリ テーブルを有効にする*：ボリューム上でインベントリ テーブルを有効にすると、システムは S3 アクセス ポイントにアクセス可能なすべてのオブジェクトのメタデータを生成し、AWS S3 リクエストのコストが発生します。詳細については、<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>を参照してください。</block>
 </blocks>
