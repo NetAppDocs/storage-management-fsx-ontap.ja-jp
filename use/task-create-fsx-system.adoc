@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/task-create-fsx-system.html 
-keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete system, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security, bluexp, NetApp Console 
+keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create system, delete system, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security, NetApp Console 
 summary: NetApp Consoleからボリュームと追加のデータ サービスを追加および管理するには、FSx for ONTAPファイル システムを作成または検出します。 
 ---
 = FSx for ONTAPファイルシステムを作成または検出する
@@ -222,7 +222,7 @@ AWS Managed Microsoft AD を使用している場合は、AWS Delegated FSx Admi
 
 . 「バックアップとメンテナンス」で、次の情報を入力します。
 +
-.. *FSx for ONTAPバックアップ*: 毎日の自動バックアップはデフォルトで有効になっています。必要に応じて無効にします。
+.. *ボリュームバックアップ*：日次自動バックアップはデフォルトで有効になっています。必要に応じて無効にしてください。
 +
 ... *自動バックアップの保持期間*: 自動バックアップを保持する日数を入力します。
 ... *毎日の自動バックアップ ウィンドウ*: *指定なし* (毎日のバックアップの開始時刻が自動的に選択されます) または *毎日のバックアップの開始時刻を選択* のいずれかを選択し、開始時刻を指定します。
