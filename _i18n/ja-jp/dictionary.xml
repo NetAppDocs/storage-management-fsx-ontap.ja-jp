@@ -91,9 +91,6 @@
   <block id="bd88f5d8a1d52ec005c5976780f565ab" category="summary">FSx for ONTAP作業環境を作成または管理するには、NetApp コンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetApp Consoleに AWS 認証情報を追加する必要がNetApp Console。</block>
   <block id="8fad3d94a3385eeb6406613f49896cdd" category="doc">FSx for ONTAPの権限を設定する</block>
   <block id="13f9bf1ee7de953172b557e8312ec6e4" category="section-title">AWS認証情報が必要な理由</block>
-  <block id="6ac7ea2b85486160098bf7719b2a2efd" category="paragraph">NetApp Consoleから FSx for ONTAPシステムを作成および管理するには、AWS 認証情報が必要です。新しい AWS 認証情報を作成したり、既存の組織に AWS 認証情報を追加したりできます。認証情報は、NetApp Consoleから AWS クラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。</block>
-  <block id="6b117b21bf1afabb5a312619e535e582" category="paragraph">資格情報と権限はNetApp Workload Factoryを介して管理されます。  Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してユーザーがワークロードを最適化できるように設計されたライフサイクル管理プラットフォームです。  NetApp Consoleは、Workload Factory と同じ AWS 認証情報と権限のセットを使用します。</block>
-  <block id="2eeecbf656db25d1c621552e4d4ca863" category="paragraph">Workload Factory インターフェースは、FSx for ONTAPユーザーに、ストレージ、VMware、データベース、GenAI などのワークロード機能を有効にし、ワークロードの権限を選択するオプションを提供します。  _Storage_ は Workload Factory のストレージ管理機能であり、FSx for ONTAPファイル システムを作成および管理するために有効にして認証情報を追加する必要がある唯一の機能です。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">タスク概要</block>
   <block id="d396bcde35d40ba871e0e0c3704be40c" category="paragraph">新しい AWS 認証情報と既存の AWS 認証情報は、*認証情報* ページの管理メニューから表示できます。</block>
   <block id="b34e9b22e049f50831f2226787b16920" category="inline-image-macro">NetApp Console管理メニューで強調表示された管理メニューと資格情報オプションのスクリーンショット。</block>
@@ -102,56 +99,40 @@
   <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*手動*: Workload Factory で認証情報を追加しながら、AWS アカウントに IAM ポリシーと IAM ロールを作成します。</block>
   <block id="1a04b786edc8b8251d22307b11cb2a8d" category="list-text">*自動*: 権限に関する最小限の情報を取得し、CloudFormation スタックを使用して認証情報の IAM ポリシーとロールを作成します。</block>
   <block id="3e704746794b6c6da13402ca9df54660" category="section-title">アカウントに手動で資格情報を追加する</block>
-  <block id="0436081f5e755485ef83cd5e2cff7957" category="paragraph">AWS 認証情報をNetApp Consoleに手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限をアカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。</block>
   <block id="ea106b6fa0504ddb53d4506dcd8e7755" category="paragraph">資格情報の作成には 3 つの部分があります。</block>
   <block id="b4968210d824a9808cbfac903e6a2461" category="list-text">使用するサービスと権限レベルを選択し、AWS マネジメントコンソールから IAM ポリシーを作成します。</block>
   <block id="3b022a10e2c2436d37f59e86b18713f7" category="list-text">AWS マネジメントコンソールから IAM ロールを作成します。</block>
-  <block id="d134293f0e79557d8f817837f2ffd628" category="list-text">NetApp Consoleのワークロードから、名前を入力し、資格情報を追加します。</block>
-  <block id="d80261d8e1789ada875dd9514c24b8fe" category="paragraph">FSx for ONTAP作業環境を作成または管理するには、FSx for ONTAP作業環境の作成に必要な権限をワークロードに付与する IAM ロールの ARN を指定して、 NetApp Consoleでワークロードに AWS 認証情報を追加する必要があります。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始する前に</block>
   <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">AWS アカウントにログインするには認証情報が必要です。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
   <block id="34ba06ab4c0d52cdf7ed2fa3961defbb" category="list-text">NetApp Consoleメニューから、*管理* を選択し、次に *資格情報* を選択します。</block>
   <block id="1e34a5d86e7e16c6c442d1977307e2d7" category="list-text">*組織の資格情報*ページから、*資格情報の追加*を選択します。</block>
   <block id="fa6452c77972d8b4daaf92d6a7d82d49" category="list-text">*Amazon Web Services*、*FSx for ONTAP*、*次へ*の順に選択します。</block>
-  <block id="3e641202d01950b463305362526bd0b5" category="paragraph">現在、 NetAppワークロードの *資格情報の追加* ページが表示されています。</block>
   <block id="c8df78ded4cea0598f7679f11a3c3246" category="list-text">*手動で追加*を選択し、以下の手順に従って_権限設定_の下の 3 つのセクションに入力します。</block>
   <block id="facff49e2bd72676ffc323376c6f7c86" category="section-title">ステップ1: ストレージ機能を選択し、IAMポリシーを作成する</block>
-  <block id="643bb3986a2755c5582d9f82862ff934" category="paragraph">このセクションでは、これらの資格情報の一部として管理するストレージ機能と、ストレージに対して有効にするアクセス許可を選択します。データベース、GenAI、VMware などの他のワークロードを選択することもできます。選択が完了したら、選択したワークロードごとにポリシーのアクセス許可を Codebox からコピーし、AWS アカウント内の AWS マネジメントコンソールに追加してポリシーを作成する必要があります。</block>
-  <block id="eb73cd2a4bbc3dbb4bbab5f5a9b6fb8d" category="list-text">*ポリシーの作成* セクションで、これらの資格情報に含める各ワークロード機能を有効にします。  *ストレージ* を有効にして、ファイルシステムを作成および管理します。</block>
   <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">後から追加機能を追加できるので、現在展開および管理するワークロードを選択するだけです。</block>
-  <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション: ワークロード操作を完了するために必要な AWS アカウント権限があるかどうかを確認するには、[*自動権限チェックを有効にする*] を選択します。チェックを有効にすると、<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>許可ポリシーに従ってください。この権限の目的は、権限の確認のみです。資格情報を追加した後で権限を削除できますが、部分的に成功した操作のリソース作成を防ぎ、必要な手動のリソースクリーンアップを省くために、権限を保持しておくことをお勧めします。</block>
   <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">Codebox ウィンドウで、最初の IAM ポリシーの権限をコピーします。</block>
   <block id="d9951e6a22fb7f7d403d017e5b8ef9c6" category="list-text">別のブラウザウィンドウを開き、AWS マネジメントコンソールで AWS アカウントにログインします。</block>
   <block id="0545945650ae73f856cfac5d203df5f5" category="list-text">IAM サービスを開き、*ポリシー* &gt; *ポリシーの作成* を選択します。</block>
-  <block id="27b582bcbcca0fd418f9f9f855710d0a" category="list-text">ファイルの種類として JSON を選択し、手順 3 でコピーした権限を貼り付けて、[次へ] を選択します。</block>
   <block id="e8ea9480c70ef3b586604a914898eff0" category="list-text">ポリシーの名前を入力し、「ポリシーの作成」を選択します。</block>
   <block id="c240537b83fe8c59f5bb758e5c166662" category="list-text">手順 1 で複数のワークロード機能を選択した場合は、これらの手順を繰り返して、ワークロード権限のセットごとにポリシーを作成します。</block>
   <block id="eca99ccb2e04bfcfc06a9cb5860e53a9" category="section-title">ステップ2: ポリシーを使用するIAMロールを作成する</block>
   <block id="30551002ceb8abd5af0ee8907423b553" category="paragraph">このセクションでは、作成した権限とポリシーを含む、Workload Factory が引き受ける IAM ロールを設定します。</block>
   <block id="c0a8070d8176ef21fdf6bc0d6b6833c9" category="list-text">AWS マネジメントコンソールで、*ロール &gt; ロールの作成*を選択します。</block>
   <block id="e506de832b98c2693eb3f400ef0722c0" category="list-text">*信頼されたエンティティタイプ*で、*AWS アカウント*を選択します。</block>
-  <block id="1da59cee8d6ecfd86c9da2dfa8174268" category="list-text">*別の AWS アカウント* を選択し、ワークロード ユーザー インターフェイスから FSx for ONTAPワークロード管理のアカウント ID をコピーして貼り付けます。</block>
-  <block id="32e4328757960c9f593dd2343d2aeb43" category="list-text">*必須の外部 ID* を選択し、ワークロード ユーザー インターフェースから外部 ID をコピーして貼り付けます。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">*次へ*を選択します。</block>
   <block id="552a0f683211339f8f7517a1d4fc804d" category="list-text">[アクセス許可ポリシー] セクションで、以前に定義したすべてのポリシーを選択し、[次へ] を選択します。</block>
   <block id="eb940e2ee0ec63786b166a518db881df" category="list-text">ロールの名前を入力し、「*ロールの作成*」を選択します。</block>
   <block id="38743fa9100c2dfb5d984fc45fed3de7" category="list-text">ロール ARN をコピーします。</block>
-  <block id="1529f245482821144ee904a44a0a11d5" category="list-text">ワークロードの認証情報の追加ページに戻り、*ロールの作成*セクションを展開して、_ロール ARN_ フィールドに ARN を貼り付けます。</block>
   <block id="c66b75fd4a0a3e3eff2094b970b0b897" category="section-title">ステップ3: 名前を入力して資格情報を追加する</block>
-  <block id="61d956e6854ab93a5881af8294509b97" category="paragraph">最後のステップは、ワークロードの資格情報の名前を入力することです。</block>
-  <block id="0069f72adf3b3447ce31c42959992388" category="list-text">ワークロードの資格情報の追加ページで、*資格情報の名前*を展開します。</block>
   <block id="a961eea4fc631a6689d895b16be74287" category="list-text">これらの資格情報に使用する名前を入力します。</block>
   <block id="027a8d7e43e765637f8ef1ae06ce3700" category="list-text">資格情報を作成するには、[*追加*] を選択します。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
-  <block id="7c3575dedda79e816797014fae96eda5" category="paragraph">資格情報が作成され、「資格情報」ページで表示できるようになります。 FSx for ONTAP作業環境を作成するときに、資格情報を使用できるようになりました。必要に応じて、資格情報の名前を変更したり、 NetApp Consoleから資格情報を削除したりできます。</block>
   <block id="5512d35e832df0796cf2e9bbfc4ef8e7" category="section-title">CloudFormation を使用してアカウントに認証情報を追加する</block>
-  <block id="c98e309d126aa2b94ba53d6b620ea05f" category="paragraph">使用するワークロード機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用してワークロードに AWS 認証情報を追加できます。  CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。</block>
   <block id="f48f7e164b0415ad7634845f95eb03e1" category="list-text">CloudFormation スタックを使用して認証情報を追加する場合は、AWS アカウントに次の権限が必要です。</block>
   <block id="8c4d8d6ab75350dc5209e22fd9107977" category="list-text">*資格情報の追加*を選択します。</block>
   <block id="4454b47599abbe986fcc1d78e9d5c3d5" category="list-text">*AWS CloudFormation 経由で追加*を選択します。</block>
   <block id="3534f18786c0daea2192750276eda6f0" category="list-text">*ポリシーの作成* で、これらの資格情報に含める各ワークロード機能を有効にし、各ワークロードのアクセス許可レベルを選択します。</block>
-  <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション: ワークロード操作を完了するために必要な AWS アカウント権限があるかどうかを確認するには、[*自動権限チェックを有効にする*] を選択します。チェックを有効にすると、<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>権限ポリシーに従って権限を設定します。この権限の目的は、権限の確認のみです。資格情報を追加した後で権限を削除できますが、部分的に成功した操作のリソース作成を防ぎ、必要な手動のリソースクリーンアップを省くために、権限を保持しておくことをお勧めします。</block>
   <block id="fa7fbda40357a3d9d2b6286d82c737a8" category="list-text">*資格情報名*の下に、これらの資格情報に使用する名前を入力します。</block>
   <block id="55af5349296de9cc03eea75eb011b988" category="list-text">AWS CloudFormation からの認証情報を追加します。</block>
   <block id="a83b560232f912e9085bc49e52b3b48b" category="list-text">*追加* (または *CloudFormation にリダイレクト*) を選択すると、CloudFormation にリダイレクト ページが表示されます。</block>
@@ -225,7 +206,6 @@
   <block id="cdbd850b4617286bd0b9fb37c42ae915" category="paragraph">FSx for ONTAPファイルシステムの作成と管理に必要な権限をNetApp Consoleに付与するには、AWS 認証情報を追加する必要があります。  _読み取り専用_権限と_読み取り/書き込み_権限のどちらかを選択できます。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2</block>
   <block id="535ffe13505ca1d9de92e311b54fa3ec" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>オプション: コンソールエージェントまたはリンクを作成する</block>
-  <block id="c970b62fa7cf5f61b27d9598445ae512" category="paragraph">NetApp Consoleから一部の管理タスクを実行するには、コンソール エージェントまたはNetAppワークロード リンクが必要です。  _コンソール エージェント_ は、FSx for ONTAPファイル システムを管理するために VPC にデプロイする仮想マシンです。  _link_ は AWS Lambda を活用して、FSx for ONTAPファイルシステムとの信頼関係と接続を作成します。</block>
   <block id="46b0eea407e7bf43d175b724bd9af392" category="inline-link-macro">FSx for ONTAP管理にコンソール エージェントまたはリンクが必要な場合について説明します。</block>
   <block id="7c8b4c1b1afb0bd40b9326ab59c69657" category="list-text"><block ref="7c8b4c1b1afb0bd40b9326ab59c69657" category="inline-link-macro-rx"></block></block>
   <block id="cf4709f0b7fac7a7e67b98f5cea5e8a8" category="inline-link">AWS でコンソールエージェントを作成する方法を学ぶ</block>
@@ -459,9 +439,6 @@
   <block id="82d112df39f74e9fcdd66e0e6d5aa12b" category="summary">NetApp Consoleで FSx for ONTAPシステムを作成または検出すると、ファイルシステムを管理し、バックアップやリカバリなどの機能を提供するNetAppデータ サービスを使用できるようになります。</block>
   <block id="3d524a57e639824787f68c6f88019427" category="doc">NetApp Consoleで FSx for ONTAPファイルシステムを管理する</block>
   <block id="2ec8c048ff53a4cbdbdfc16422f78635" category="paragraph">NetApp Consoleで FSx for ONTAPシステムを作成または検出した後、ボリュームの作成、ストレージ VM の管理、データの保護、ファイル システムの管理を行うことで、ファイル システムを管理できます。コンソールを使用すると、バックアップとリカバリ、データ分類、データ同期などの機能を提供するデータ サービスも使用できます。</block>
-  <block id="dd18b57adc37ce8de554a386a79bc9da" category="section-title">NetAppワークロードを使用してファイルシステムを管理する</block>
-  <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">NetAppワークロードを使用してファイルシステムを管理する方法を学びます</block>
-  <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">ONTAP System Managerを使用してファイルシステムを管理する</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Amazon CloudFormation を使用してファイルシステムを管理する</block>
   <block id="e211b2db96a2f5b2b2868517a76988c8" category="paragraph">Amazon CloudFormation を使用して、FSx for ONTAPファイルシステムリソース (ボリューム、CIFS 共有、エクスポートポリシーなど) をプロビジョニングおよび管理できます。</block>
@@ -720,7 +697,6 @@
   <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">これはシステムによって生成されたIDで、お客様のメールアドレスにマッピングされます。*NSS管理*ページの<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block>メニューからメールアドレスを表示できます。</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">ログイン資格情報トークンを更新する必要がある場合は、<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> メニューに*資格情報の更新*オプションもあります。</block>
-  <block id="e637038fd567011a59fd1e7148bf1b4f" category="paragraph">NetApp Console の Systems ページから FSx for ONTAP システムを開くと、NetApp Workloads が表示されます。Workloads は、業界のベストプラクティスを使用して、Amazon FSx for NetApp ONTAP を使用した主要なワークロードの計画、プロビジョニング、運用を行うインテリジェントな最適化および自動化サービスです。</block>
   <block id="a374db47ec4f6c8b0b47234eb4f19712" category="paragraph">データが保存されている地域で災害が発生した場合に、データの損失を防ぐためにデータを複製します。データレプリケーションは、Amazon FSx for NetApp ONTAPファイルシステムとオンプレミスONTAPシステムまたはCloud Volumes ONTAP間でサポートされています。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">ターゲット ファイル システム内の複製されたボリュームはデータ保護（DP）ボリュームであり、次の命名形式に従います：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block></block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">使用可能、作成済み、または構成ミス以外の状態のボリュームではレプリケーションはサポートされません。また、ONTAP バージョンに互換性がない場合もサポートされません。</block>
@@ -828,4 +804,27 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">関連情報</block>
   <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">階層化ポリシーを変更する</block>
   <block id="fc36a9d66532e35056304d11de6f9ae5" category="paragraph">切り替え後のターゲットボリュームの<block ref="aac2c10b4c8f9f85b27f6266bbf93855" category="inline-link-macro-rx"></block>。</block>
+  <block id="e53b35d192f3743794b3e37a24c7e92c" category="paragraph">AWS 認証情報は、NetApp Console から FSx for ONTAP システムを作成および管理するために必要です。新しい認証情報を作成することも、既存の組織に認証情報を追加することもできます。認証情報を使用すると、NetApp Console から AWS リソースを管理できます。</block>
+  <block id="1817603d4a287805c966d1fe5b8286a1" category="paragraph">クレデンシャルと権限は、NetApp Workload Factoryによって管理されます。Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステム上で実行されるVMware、EDA、およびデータベースワークロードの管理と改善を支援するために設計されたライフサイクル管理プラットフォームです。NetApp ConsoleとWorkload Factoryは、同じAWSクレデンシャルと権限のセットを使用します。_Storage_はWorkload Factoryのストレージ管理機能であり、FSx for ONTAPファイルシステムを作成および管理するために有効にしてクレデンシャルを追加する必要がある唯一の機能です。</block>
+  <block id="063ec75c7bab602d59faa10e680ab3e3" category="paragraph">AWSクレデンシャルをNetApp Consoleに手動で追加することで、使用するワークロード機能を管理するための権限と、アカウントに割り当てられているIAMロールをアカウントに付与できます。</block>
+  <block id="4d8bf726f3b794264b3256fbe87868fa" category="list-text">名前を入力し、NetApp Consoleで認証情報を追加します。</block>
+  <block id="cd40e62e43c75b6162edf45210b3f179" category="paragraph">FSx for ONTAP ファイルシステムを作成または管理するには、Workload Factory に FSx for ONTAP ファイルシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、NetApp Console に AWS 認証情報を追加する必要があります。</block>
+  <block id="8c95ad8db882d1d7fcf92ae8b84c6845" category="paragraph">このセクションでは、これらのクレデンシャルで管理するストレージ機能と、ストレージの権限を選択します。データベース、GenAI、VMwareなどの他のワークロードを選択することもできます。選択が完了したら、Codeboxから選択した各ワークロードのポリシー権限をコピーし、AWSアカウント内のAWS Management Consoleに追加してポリシーを作成する必要があります。</block>
+  <block id="e30bfd182053376b581cf82c64ede77d" category="list-text">*Create permission policies*セクションで、これらのクレデンシャルに含める各ワークロード機能を有効にします。ファイルシステムを作成および管理するには、*Storage*を有効にします。</block>
+  <block id="8805ce96ecd4d8940d5b991a7d94bf68" category="list-text">オプション：ワークロード操作を完了するために必要なAWSアカウント権限があるかどうかを確認するには、*自動権限チェックを有効にする*を選択してください。チェックを有効にすると、<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>が権限ポリシーに追加されます。この権限の目的は、権限を確認することのみです。クレデンシャルを追加した後で権限を削除することもできますが、一部の手順が失敗した場合にリソースが作成されないようにし、手動でのクリーンアップを回避するために、権限を保持しておくことをお勧めします。</block>
+  <block id="3fe356da6fc520062babda17163306d2" category="list-text">ファイルの種類としてJSONを選択し、手順4でコピーした権限を貼り付けて、*Next*を選択します。</block>
+  <block id="c053668d209688648f802b5a723845af" category="list-text">*別の AWS アカウント*を選択し、コンソールユーザーインターフェイスから FSx for ONTAP ワークロード管理のアカウント ID をコピーして貼り付けます。</block>
+  <block id="14ab243937003284978a33448a61431a" category="list-text">*必須外部ID*を選択し、外部IDをコピーしてNetApp Consoleユーザーインターフェースに貼り付けます。</block>
+  <block id="b808e215c64681ee6fbd36051127b831" category="list-text">NetApp Console の資格情報の追加ページに戻り、*ロールの作成* セクションを展開して、ARN を _Role ARN_ フィールドに貼り付けます。</block>
+  <block id="8f1c8f28b91d5f4ff27e6e559ba71303" category="paragraph">最後のステップは、クレデンシャルの名前を入力することです。</block>
+  <block id="0565d628b6ab1a709a696106d2ac6f20" category="list-text">「資格情報の追加」ページから、*資格情報名*を展開します。</block>
+  <block id="c662aa264d68eeeb7d23abd07aa8e1d6" category="paragraph">コンソールは認証情報を作成し、認証情報ページに表示します。NetApp コンソールから認証情報を使用、名前変更、または削除できます。</block>
+  <block id="4c78422e6621ed7256b5d5ef117b7236" category="paragraph">使用するワークロード機能を選択し、AWSアカウントでAWS CloudFormationスタックを起動することで、AWS CloudFormationスタックを使用してAWSクレデンシャルをNetApp Workload Factoryに追加できます。CloudFormationは、選択したワークロード機能に基づいてIAMポリシーとIAMロールを作成します。</block>
+  <block id="723d26dc27749569a11820256cc91716" category="paragraph">NetApp Workload Factoryの*認証情報の追加*ページが表示されます。</block>
+  <block id="1a3b59845cddbc873db73733ef4cd05c" category="list-text">オプション：ワークロード操作を完了するために必要なAWSアカウント権限があるかどうかを確認するには、*自動権限チェックを有効にする*を選択してください。チェックを有効にすると、<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>権限が権限ポリシーに追加されます。この権限の目的は、権限を確認することのみです。認証情報を追加した後で権限を削除することもできますが、一部の手順が失敗した場合にリソースが作成されないようにし、手動でのクリーンアップを回避するために、権限を保持しておくことをお勧めします。</block>
+  <block id="75ae3f41f6146fb82090917121efc404" category="paragraph">NetApp Console から一部の管理タスクを実行するには、Console エージェントまたは NetApp Workload Factory リンクが必要です。_Console エージェント_ は、FSx for ONTAP ファイルシステムを管理するために VPC にデプロイする仮想マシンです。_リンク_ は AWS Lambda を利用して、FSx for ONTAP ファイルシステムへの信頼関係と接続を作成します。</block>
+  <block id="7981c969ad619b2f30aad726503d9af3" category="section-title">NetApp Workload Factoryを使用してファイルシステムを管理する</block>
+  <block id="77d0d30e7a54331923339cd4b481f87a" category="paragraph">FSx for ONTAPシステムをNetApp ConsoleのSystemsページから開くと、NetApp Workload Factoryに移動します。NetApp Workload Factoryは、業界のベストプラクティスを使用してAmazon FSx for NetApp ONTAPで主要なワークロードを計画、プロビジョニング、運用するインテリジェントな最適化および自動化サービスです。</block>
+  <block id="bd794697f728318e3eb013d378f93756" category="inline-link">NetApp Workload Factoryを使用してファイルシステムを管理する方法を学びます</block>
+  <block id="7ccf7420ef554de52729730c921b7ed6" category="paragraph"><block ref="7ccf7420ef554de52729730c921b7ed6" category="inline-link-rx"></block></block>
 </blocks>

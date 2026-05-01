@@ -22,7 +22,7 @@ FSx for ONTAPファイルシステムの作成と管理に必要な権限をNetA
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]オプション: コンソールエージェントまたはリンクを作成する
 [role="quick-margin-para"]
-NetApp Consoleから一部の管理タスクを実行するには、コンソール エージェントまたはNetAppワークロード リンクが必要です。  _コンソール エージェント_ は、FSx for ONTAPファイル システムを管理するために VPC にデプロイする仮想マシンです。  _link_ は AWS Lambda を活用して、FSx for ONTAPファイルシステムとの信頼関係と接続を作成します。
+NetApp Console から一部の管理タスクを実行するには、Console エージェントまたは NetApp Workload Factory リンクが必要です。_Console エージェント_ は、FSx for ONTAP ファイルシステムを管理するために VPC にデプロイする仮想マシンです。_リンク_ は AWS Lambda を利用して、FSx for ONTAP ファイルシステムへの信頼関係と接続を作成します。
 
 [role="quick-margin-list"]
 * link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features["FSx for ONTAP管理にコンソール エージェントまたはリンクが必要な場合について説明します。"]
