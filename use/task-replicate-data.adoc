@@ -29,7 +29,7 @@ summary: 予期しない災害が発生した場合のデータ損失を回避�
 
 [NOTE]
 ====
-1つのソース（読み取り / 書き込み）ボリュームまたは1つのデータ保護（DP）ボリュームを複製できます。カスケードレプリケーションはサポートされていますが、3番目のホップはサポートされていません。link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["カスケードレプリケーション"^]の詳細をご覧ください。
+1つのソース（読み取り / 書き込み）ボリュームまたは1つのデータ保護（DP）ボリュームを複製できます。カスケードレプリケーションはサポートされていますが、3番目のホップはサポートされていません。link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["カスケードレプリケーション"^]の詳細をご覧ください。
 
 ====
 

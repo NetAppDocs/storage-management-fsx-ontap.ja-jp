@@ -150,7 +150,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda �
 BlueXP Workloads は、ファイル システム構成の適切なアーキテクチャの状態を確認できるダッシュボードを提供します。この分析を活用して、FSx for ONTAPファイルシステムのベストプラクティスを実装できます。ファイル システム構成分析には、SSD 容量しきい値、スケジュールされたローカル スナップショット、スケジュールされた FSx for ONTAPバックアップ、データ階層化、リモート データ レプリケーションなどの構成が含まれます。
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["ファイルシステム構成の適切なアーキテクチャ分析について学ぶ"^]
-* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["ファイルシステムのベストプラクティスを実装する"^]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["ファイルシステムのベストプラクティスを実装する"^]
 
 
 
