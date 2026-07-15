@@ -18,6 +18,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["A
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 Amazon FSx for NetApp ONTAP管理には、NetApp Consoleからアクセスできます。
@@ -30,6 +31,7 @@ NetApp Consoleの使用を開始するためにライセンスやサブスクリ
 
 
 
+[[using-fsx-for-ontap-from-the-netapp-console]]
 == NetApp Consoleから FSx for ONTAPを使用する
 
 NetApp Consoleのシステム ページから、FSx for ONTAPシステムを作成および検出し、System Manager やその他のNetAppサービスを使用できます。  Amazon FSx for NetApp ONTAPで実行されている FSx for ONTAPシステムとワークロードを管理する場合は、 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp Workload Factory"^] 。
@@ -38,6 +40,7 @@ link:../use/task-create-fsx-system.html["NetApp Consoleから FSx for ONTAPシ�
 
 
 
+[[features]]
 == 機能
 
 * ストレージ デバイス、ソフトウェア、またはバックアップを構成または管理する必要はありません。
@@ -49,6 +52,7 @@ link:../use/task-create-fsx-system.html["NetApp Consoleから FSx for ONTAPシ�
 
 
 
+[[additional-features-in-netapp-console]]
 == NetApp Consoleの追加機能
 
 * FSx for ONTAPは、NetApp Consoleを_標準_ モードで使用する場合にサポートされ、 NetApp ConsoleSaaS レイヤーを活用して完全な機能を提供します。  _制限_ モードと _プライベート_ モードはサポートされていません。
@@ -63,6 +67,7 @@ link:../use/task-create-fsx-system.html["NetApp Consoleから FSx for ONTAPシ�
 
 
 
+[[console-agents-and-links-unlock-all-fsx-for-ontap-features]]
 == コンソールエージェントとリンクにより、FSx for ONTAPのすべての機能が利用可能になります。
 
 コンソールエージェントとリンクにより、NetApp ConsoleとAmazon FSx for NetApp ONTAP作業環境間の接続と信頼関係が確立されます。コンソールエージェントは、クラウドまたはオンプレミスのネットワークで実行されるNetAppソフトウェアであり、リンクは AWS Lambda を使用してNetAppコードを実行します。コンソールを起動したり、FSx for ONTAPシステムを作成したりするためにコンソール エージェントまたはリンクは必要ありませんが、FSx for ONTAPの機能を最大限に活用するには、コンソール エージェントまたはリンクを使用する必要があります。
@@ -90,6 +95,7 @@ link:../use/task-create-fsx-system.html["NetApp Consoleから FSx for ONTAPシ�
 
 
 
+[[cost]]
 == 料金
 
 FSx for ONTAPアカウントは、 NetAppではなく AWS によって管理されます。参照 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP入門ガイド"^]。
@@ -98,12 +104,14 @@ AWS のコンソールエージェントまたはリンク、およびNetApp Dat
 
 
 
+[[supported-regions]]
 == サポートされている地域
 
 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポートされている Amazon リージョンを表示します。"^]
 
 
 
+[[getting-help]]
 == 助けを得る
 
 Amazon FSx for NetApp ONTAPは、AWS ファーストパーティソリューションです。  FSx for ONTAPファイルシステム、インフラストラクチャ、またはこのサービスを使用したソリューションに関連する質問や技術サポートの問題については、AWS マネジメントコンソールのサポートセンターを使用して AWS にサポートケースを開いてください。  「FSx for ONTAP」サービスと適切なカテゴリを選択します。  AWS サポートケースを作成するために必要な残りの情報を提供します。

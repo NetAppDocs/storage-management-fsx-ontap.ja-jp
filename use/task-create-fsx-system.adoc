@@ -18,6 +18,7 @@ NetApp Consoleからボリュームと追加のデータ サービスを追加�
 
 
 
+[[create-an-fsx-for-ontap-system]]
 == FSx for ONTAPシステムを作成する
 
 最初のステップは、FSx for ONTAPファイル システムを作成することです。  AWSマネジメントコンソールでFSx for ONTAPファイルシステムをすでに作成している場合は、link:task-create-fsx-system.html#discover-an-existing-fsx-for-ontap-file-system["NetApp Consoleを使用して検出する"] 。
@@ -34,6 +35,7 @@ FSx for ONTAPファイルシステムを作成する前に、次のものが必�
 
 
 
+[[create-an-fsx-for-ontap-file-system]]
 == FSx for ONTAPファイルシステムを作成する
 
 _クイック作成_ または _高度な作成_ を使用して、FSx for ONTAPファイル システムを作成できます。 Codebox で利用可能な REST API、CloudFormation、Terraform などのツールも使用できます。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Codebox を使って自動化する方法を学ぶ"^] 。
@@ -242,6 +244,7 @@ FSx for ONTAPファイルシステムは、 NetApp Consoleのワークロード�
 ====
 
 
+[[discover-an-existing-fsx-for-ontap-file-system]]
 == 既存の FSx for ONTAPファイルシステムを検出する
 
 以前にNetApp Consoleで AWS 認証情報を指定している場合は、 [Discoverable systems]ページから FSx for ONTAPファイルシステムを自動的に検出できます。利用可能なデータ サービスを確認することもできます。

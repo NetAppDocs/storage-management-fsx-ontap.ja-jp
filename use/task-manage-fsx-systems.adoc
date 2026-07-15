@@ -18,6 +18,7 @@ NetApp Consoleで FSx for ONTAPシステムを作成または検出した後、�
 
 
 
+[[manage-a-file-system-using-netapp-workload-factory]]
 == NetApp Workload Factoryを使用してファイルシステムを管理する
 
 FSx for ONTAPシステムをNetApp ConsoleのSystemsページから開くと、NetApp Workload Factoryに移動します。NetApp Workload Factoryは、業界のベストプラクティスを使用してAmazon FSx for NetApp ONTAPで主要なワークロードを計画、プロビジョニング、運用するインテリジェントな最適化および自動化サービスです。
@@ -26,6 +27,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp Workload Fac
 
 
 
+[[manage-a-file-system-using-ontap-system-manager]]
 == ONTAP System Managerを使用してファイルシステムを管理する
 
 ONTAP System Manager インターフェイスを使用して、コンソールから FSx for ONTAPファイル システムを直接管理できます。System Manager を使用するには、コンソールエージェントまたは AWS Lambda リンクが必要です。
@@ -34,6 +36,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リ�
 
 
 
+[[manage-a-file-system-using-amazon-cloudformation]]
 == Amazon CloudFormation を使用してファイルシステムを管理する
 
 Amazon CloudFormation を使用して、FSx for ONTAPファイルシステムリソース (ボリューム、CIFS 共有、エクスポートポリシーなど) をプロビジョニングおよび管理できます。
@@ -42,12 +45,14 @@ link:https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider["NetApp 
 
 
 
+[[use-netapp-data-services-with-a-file-system]]
 == ファイルシステムでNetAppデータサービスを使用する
 
 NetAppデータ サービスを FSx for ONTAPファイル システムと共に使用して、データのバックアップとリカバリ、データの転送と同期、データのスキャンと分類、データの複製、アクセスの高速化、トラフィックのオフロードなどを行うことができます。
 
 
 
+[[back-up-and-recover-your-data]]
 === データのバックアップと復元
 
 NetApp Backup and Recovery は、オンプレミスとクラウドの両方で、 NetApp ONTAPデータ、データベース、仮想マシンに対して効率的で安全かつコスト効率に優れたデータ保護を提供します。
@@ -56,6 +61,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Net
 
 
 
+[[transfer-and-synchronize-data]]
 === データの転送と同期
 
 NetApp Copy and Sync は、オンプレミスとクラウド オブジェクト ストア間で NAS データを転送するためのクラウド レプリケーションおよび同期サービスです。
@@ -64,6 +70,7 @@ link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html
 
 
 
+[[scan-and-classify-your-data]]
 === データをスキャンして分類する
 
 NetApp Data Classification を使用すると、組織のハイブリッド マルチクラウド全体のデータをスキャンして分類できます。
@@ -72,6 +79,7 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/index.html[
 
 
 
+[[speed-up-access-or-offload-traffic]]
 === アクセスを高速化したりトラフィックをオフロードしたりする
 
 NetApp Volume Cachingは、リモートの場所に永続的な書き込み可能なボリュームを提供します。ボリューム キャッシュを使用すると、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりできます。

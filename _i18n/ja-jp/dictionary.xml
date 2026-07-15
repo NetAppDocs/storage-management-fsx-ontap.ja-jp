@@ -460,7 +460,6 @@
   <block id="ce269f36061333cca0642955f85d7893" category="paragraph"><block ref="ce269f36061333cca0642955f85d7893" category="inline-link-macro-rx"></block></block>
   <block id="9793db8d97a651febf9f052b60487a84" category="list-text">レプリケーションの作成ページで、レプリケートするソースボリュームを選択し、[次へ] をクリックします。</block>
   <block id="5bc67df36eab9c2f7b3c55d3f683100e" category="list-text">レプリケーション ターゲットで、次の内容を入力します。</block>
-  <block id="562c87a680d962135f8e44bc0d159259" category="list-text">*ストレージ VM 名*: ドロップダウン メニューからストレージ VM を選択します。選択したストレージ VM は、このレプリケーション関係で選択されたすべてのボリュームのターゲットになります。</block>
   <block id="56aeb18822215ccd01a9293a40c3b44a" category="list-text">*ボリューム名*: ターゲットボリューム名は次の形式で自動的に生成されます<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。自動生成されたボリューム名を使用することも、別のボリューム名を入力することもできます。</block>
   <block id="d3de0d39919d3426b0b013a4457e21ff" category="list-text">*使用ケース*: レプリケーションの次の使用ケースのいずれかを選択します。選択したユースケースに応じて、Workload Factory はベストプラクティスに従って推奨値をフォームに入力します。フォームに入力する際に、推奨値を受け入れることも、変更することもできます。</block>
   <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">移行: データをターゲットの FSx for ONTAPファイルシステムに転送します</block>
@@ -485,8 +484,6 @@
   <block id="3fa74f1d72fd1aab6c47bb2b48e47218" category="list-text">*長期保存*: 必要に応じて、長期保存用のスナップショットを有効にします。長期保存により、サイト全体の障害が発生した場合でもビジネス サービスは継続して実行でき、セカンダリ コピーを使用してアプリケーションを透過的にフェールオーバーできます。</block>
   <block id="70fc7bb591b365ee183f47900503df43" category="paragraph">長期保存のないレプリケーションでは、_MirrorAllSnapshots_ ポリシーが使用されます。長期保存を有効にすると、レプリケーションに _MirrorAndVault_ ポリシーが割り当てられます。</block>
   <block id="7f5d1f7be42587a8d5bb2f5b6098ce8c" category="paragraph">長期保存を有効にする場合は、既存のポリシーを選択するか、新しいポリシーを作成して、複製するスナップショットと保持する数を定義します。</block>
-  <block id="079c30a70413acebb5440fd932a014ad" category="admonition">長期保存には、ソース ラベルとターゲット ラベルの一致が必要です。必要に応じて、ワークロード ファクトリーで不足しているラベルを作成できます。</block>
-  <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*既存のポリシーを選択*: ドロップダウン メニューから既存のポリシーを選択します。</block>
   <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*新しいポリシーを作成*：*ポリシー名*を入力します。</block>
   <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*不変のスナップショット*: オプション。このポリシーで作成されたスナップショットが保持期間中に削除されないようにするには、「*不変スナップショットを有効にする*」を選択します。</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">*保存期間*を時間、日、月、または年数で設定します。</block>
@@ -732,7 +729,6 @@
   <block id="b3b30d7a6ed8c780ecba9bd7ce8c2400" category="list-text">FSx for ONTAP とオンプレミス ONTAP または Cloud Volumes ONTAP 間でデータをレプリケートするには、ファイルシステムへのリンクを関連付ける必要があります。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。リンクを関連付けた後、この操作に戻ってください。</block>
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">オンプレミス ONTAP システムから FSx for ONTAP ファイルシステムへのレプリケーションの場合は、オンプレミス ONTAP システムが検出されていることを確認してください。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">移行のユースケースでは、ストレージ VM のデータおよび設定とのレプリケーション関係を作成する前に、ボリュームの最後のレプリケーションが過去 24 時間以内に完了していることを確認してください。</block>
-  <block id="876ae080bad2795906c16db5a7bfc488" category="paragraph">* ストレージ VM 構成のレプリケート * ：オプションで、単一のストレージ VM のストレージ VM データと構成設定をレプリケートするように選択します。データと構成設定を同時に移行する場合は、ボリュームの最後のレプリケーションが過去 24 時間以内に完了していることを確認してください。この機能を使用するには、同じストレージ VM 内のすべてのボリュームを選択する必要があります。すべてのボリュームの階層化ポリシーは、移行のユースケースに推奨されるソースボリュームの階層化ポリシーにデフォルト設定されます。</block>
   <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">レプリケーション関係は、ターゲットのFSx for ONTAPファイルシステムの*レプリケーション関係*タブに表示されます。</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">移行のためにレプリケーション関係を作成した場合は、ストレージ VM のデータと構成設定をターゲットの FSx for ONTAP ファイルシステムに移行するために、すべてのボリュームとそれに関連付けられたストレージ VM をカットオーバーする必要があります。</block>
   <block id="f2ce5ba0f770aa8ae822f79404813d99" category="section-title">移行ユースケースのカットオーバーレプリケーション</block>
@@ -827,4 +823,17 @@
   <block id="7ccf7420ef554de52729730c921b7ed6" category="paragraph"><block ref="7ccf7420ef554de52729730c921b7ed6" category="inline-link-rx"></block></block>
   <block id="0ce459c51e344ed42fa3a4c5e5211577" category="list-text"><block ref="0ce459c51e344ed42fa3a4c5e5211577" category="inline-link-macro-rx"></block></block>
   <block id="806a2b7e18f65da5e9f4288ad8e420ae" category="paragraph">1つのソース（読み取り / 書き込み）ボリュームまたは1つのデータ保護（DP）ボリュームを複製できます。カスケードレプリケーションはサポートされていますが、3番目のホップはサポートされていません。<block ref="0c64701c212ba4f059a9983b3d2a4857" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="7c33460ede710e45d063c1062b0cacba" category="doc">NetApp Console のワークロードからの GenAI ワークロードの削除</block>
+  <block id="ef8dda25d49364e8cb6cea8ce87a605c" category="paragraph">GenAI ワークロードが NetApp Console のワークロードから削除されました。</block>
+  <block id="6fbe09b3d9705d922f633d5654393f36" category="paragraph">*ストレージVM構成の複製*：オプションで、単一のストレージVMのデータと構成設定を複製するかどうかを選択します。データと設定を移行する際は、すべてのボリュームが過去24時間以内にレプリケーションを完了し、同時に切り替えを行う必要があります。</block>
+  <block id="d5b5dacfafad754125a1766d22142ae9" category="paragraph">すべてのボリュームの階層化ポリシーは、デフォルトでソースボリュームの階層化ポリシーが適用されます。これは、移行のユースケースにおいて推奨される設定です。</block>
+  <block id="21c415465773e849068dc431e13446de" category="paragraph">移行中、クライアントはソースONTAPファイルシステムからデータにアクセスします。切り替え後、ボリュームはターゲットFSx for ONTAPファイルシステムのIPアドレスを通じて利用可能になります。古いIPアドレスを使用しているクライアントやリソースを更新してください。</block>
+  <block id="5d7672a9b59eb24aba87a27c8bbec3cf" category="list-text">*ストレージVM名*：ストレージVMを選択します。選択したストレージVMは、このレプリケーション関係における選択されたすべてのボリュームのターゲットになります。</block>
+  <block id="6a61ae33311b14370f4dc27907232bd8" category="paragraph">ソースストレージVMとターゲットストレージVMの名前が同じ場合、ピアリングの競合を回避するために、ターゲットストレージVM名にファイルシステムエイリアスを作成します。</block>
+  <block id="e9712999f0fba60273338ec00996f750" category="list-text">*レプリケーション関係の初期化*：レプリケーション関係を作成した直後に初期化するか、後で初期化するかを選択します。初期化には時間がかかる場合があるため、オフピーク時間帯にベースライン転送を実行することをお勧めします。</block>
+  <block id="c881c341babc8c1d5988377bf0380590" category="paragraph">後で手動で初期化するには、<block ref="588943a82f15abe65d3587b81de5b7ab" category="inline-xref-macro-rx"></block>の手順を参照してください。</block>
+  <block id="fabdd77b146b0b5f04616afb10561fb8" category="admonition">長期保存には、ソースラベルとターゲットラベルの一致が必要です。ご希望であれば、Workload Factory が不足しているラベルを作成することも可能です。</block>
+  <block id="015e6ecffa9ac033df81ffa6004a8511" category="list-text">*既存のポリシーを選択*：既存のポリシーを選択します。</block>
+  <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026年7月15日</block>
+  <block id="911a94d5dfd3459887baca73e6590302" category="paragraph">&lt;stdin&gt; の未解決のディレクティブ - include::.._whatsnew/2026-07-15.adoc[]</block>
 </blocks>

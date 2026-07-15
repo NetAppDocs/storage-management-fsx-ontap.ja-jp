@@ -4,6 +4,7 @@
 
 
 
+[[iamsimulatepermissionpolicy-permission-update]]
 === iam:SimulatePermissionPolicy 権限の更新
 
 これで、 `iam:SimulatePrincipalPolicy`追加の AWS アカウント認証情報を追加したり、GenAI ワークロードなどの新しいワークロード機能を追加したりするときに、 BlueXPコンソールから権限を取得できます。

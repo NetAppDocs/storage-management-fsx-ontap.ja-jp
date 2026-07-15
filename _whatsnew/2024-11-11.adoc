@@ -4,6 +4,7 @@
 
 
 
+[[fsx-for-ontap-integrates-with-storage-in-bluexp-workload-factory]]
 === FSx for ONTAP はBlueXP Workload Factory のストレージと統合されます
 
 ボリュームの追加、ファイルシステム容量の拡張、ストレージ VM の管理などの FSx for ONTAPファイルシステム管理タスクは、 NetAppとAmazon FSx for NetApp ONTAPが提供する新しいサービスであるBlueXP workload factoryで管理されるようになりました。既存の資格情報と権限はこれまでと同様に使用できます。違いは、 BlueXP workload factoryからファイル システムを管理する機能がさらに充実していることです。  BlueXPキャンバスから FSx for ONTAP作業環境を開くと、 BlueXP workload factoryに直接移動します。

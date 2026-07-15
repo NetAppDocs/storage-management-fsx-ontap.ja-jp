@@ -18,6 +18,7 @@ FSx for ONTAPファイルシステムを作成または管理するには、 Net
 
 
 
+[[why-aws-credentials-are-required]]
 == AWS認証情報が必要な理由
 
 AWS 認証情報は、NetApp Console から FSx for ONTAP システムを作成および管理するために必要です。新しい認証情報を作成することも、既存の組織に認証情報を追加することもできます。認証情報を使用すると、NetApp Console から AWS リソースを管理できます。
@@ -26,6 +27,7 @@ AWS 認証情報は、NetApp Console から FSx for ONTAP システムを作成�
 
 
 
+[[about-this-task]]
 == タスク概要
 
 Workload Factory のストレージから FSx for ONTAPの新しい認証情報を追加する場合は、付与する権限ポリシーを決定する必要があります。  FSx for ONTAPファイルシステムなどの AWS リソースを検出するには、_表示、計画、および分析_ の権限が必要です。 FSx for ONTAPファイル システムをデプロイするには、_ファイル システムの作成および削除_ 権限が必要です。権限がなくても、FSx for ONTAPの基本的な操作を実行できます。link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["権限について詳しくはこちら"]。
@@ -42,6 +44,7 @@ image:screenshot-netapp-console-administration-credentials.png["NetApp Console�
 
 
 
+[[add-credentials-to-an-account-manually]]
 == アカウントに手動で資格情報を追加する
 
 AWSクレデンシャルをNetApp Consoleに手動で追加することで、使用するワークロード機能を管理するための権限と、アカウントに割り当てられているIAMロールをアカウントに付与できます。
@@ -67,6 +70,7 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 
+[[step-1-select-the-storage-capability-and-create-the-iam-policy]]
 === ステップ1: ストレージ機能を選択し、IAMポリシーを作成する
 
 このセクションでは、これらのクレデンシャルで管理するストレージ機能と、ストレージの権限を選択します。データベース、GenAI、VMwareなどの他のワークロードを選択することもできます。選択が完了したら、Codeboxから選択した各ワークロードのポリシー権限をコピーし、AWSアカウント内のAWS Management Consoleに追加してポリシーを作成する必要があります。
@@ -88,6 +92,7 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 
+[[step-2-create-the-iam-role-that-uses-the-policies]]
 === ステップ2: ポリシーを使用するIAMロールを作成する
 
 このセクションでは、作成した権限とポリシーを含む、Workload Factory が引き受ける IAM ロールを設定します。
@@ -109,6 +114,7 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 
+[[step-3-enter-a-name-and-add-the-credentials]]
 === ステップ3: 名前を入力して資格情報を追加する
 
 最後のステップは、クレデンシャルの名前を入力することです。
@@ -124,6 +130,7 @@ AWS アカウントにログインするには認証情報が必要です。
 
 
 
+[[add-credentials-to-an-account-using-cloudformation]]
 == CloudFormation を使用してアカウントに認証情報を追加する
 
 使用するワークロード機能を選択し、AWSアカウントでAWS CloudFormationスタックを起動することで、AWS CloudFormationスタックを使用してAWSクレデンシャルをNetApp Workload Factoryに追加できます。CloudFormationは、選択したワークロード機能に基づいてIAMポリシーとIAMロールを作成します。

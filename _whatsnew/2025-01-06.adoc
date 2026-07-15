@@ -4,6 +4,7 @@
 
 
 
+[[netapp-releases-additional-cloudformation-resources]]
 === NetAppが追加のCloudFormationリソースをリリース
 
 NetApp は現在、AWS コンソール内で公開されていない高度なONTAPコンポーネントを顧客が利用できる CloudFormation リソースを提供しています。 CloudFormation は、AWS の Infrastructure as Code メカニズムです。レプリケーション関係、CIFS 共有、NFS エクスポート ポリシー、スナップショットなどを作成できます。

@@ -4,6 +4,7 @@
 
 
 
+[[credentials-update]]
 === 資格情報の更新
 
 FSx for ONTAPファイル システムの資格情報と権限を設定すると、 BlueXP資格情報ページにリダイレクトされます。このページから、FSx for ONTAP の認証情報の名前を変更したり、削除したりできます。

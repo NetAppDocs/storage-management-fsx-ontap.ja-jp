@@ -4,12 +4,14 @@
 
 
 
+[[maintenance-window-start-time]]
 === メンテナンスウィンドウの開始時刻
 
 いつlink:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["職場環境の整備"]、メンテナンスが重要なビジネス アクティビティと競合しないように、毎週 30 分間のメンテナンス ウィンドウの開始時刻を指定できます。
 
 
 
+[[distribute-volume-data-using-flexgroups]]
 === FlexGroupsを使用してボリュームデータを分散する
 
 ボリュームを作成するときに、 FlexGroupを作成してボリューム間でデータを分散することにより、データの最適化を有効にすることができます。
