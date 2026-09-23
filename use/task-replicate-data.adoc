@@ -4,7 +4,7 @@ permalink: use/task-replicate-data.html
 keywords: replication, replicate fsx for ontap, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync 
 summary: 予期しない災害が発生した場合のデータ損失を回避するために、NetApp Console から FSx for ONTAP ファイルシステムのレプリケーション関係を作成します。 
 ---
-= NetApp ConsoleでFSx for ONTAPにデータを複製
+= Amazon FSx for NetApp ONTAP を使用したデータのレプリケーション
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -123,7 +123,7 @@ Workload Factory は、次のストレージシステム間の移行レプリケ
 .. *ボリューム名*: ターゲットボリューム名は次の形式で自動的に生成されます `{OriginalVolumeName}_copy`。自動生成されたボリューム名を使用することも、別のボリューム名を入力することもできます。
 .. *階層化ポリシー*: ターゲット ボリュームに保存されているデータの階層化ポリシーを選択します。階層化ポリシーは、選択したユースケースに推奨される階層化ポリシーにデフォルト設定されます。
 +
-_バランス (自動)_ は、Workload Factory コンソールを使用してボリュームを作成するときのデフォルトの階層化ポリシーです。ボリューム階層化ポリシーの詳細については、以下を参照してください。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["ボリュームストレージ容量"^] AWS FSx for NetApp ONTAPドキュメント。ワークロード ファクトリーは、ワークロード ファクトリー コンソールで階層化ポリシーにユースケース ベースの名前を使用し、括弧内に FSx for ONTAP階層化ポリシー名を含めることに注意してください。
+Workload Factory コンソールを使用してボリュームを作成する場合、デフォルトの階層化ポリシーは「バランス型（自動）」です。ボリューム階層化ポリシーの詳細については、AWS FSx for NetApp ONTAP ドキュメントのlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["ボリュームストレージ容量"^]を参照してください。Workload Factory は、階層化ポリシーに Workload Factory コンソールでユースケースベースの名前を使用しており、FSx for ONTAP の階層化ポリシー名は括弧内に記載されています。
 
 +
 移行ユースケースを選択した場合、Workload Factory はソース ボリュームの階層化ポリシーをターゲット ボリュームにコピーすることを自動的に選択します。階層化ポリシーのコピーの選択を解除し、レプリケーション対象として選択したボリュームに適用する階層化ポリシーを選択できます。
@@ -288,4 +288,4 @@ NOTE: 長期保存には、ソースラベルとターゲットラベルの一�
 [[related-information]]
 == 関連情報
 
-切り替え後のターゲットボリュームのlink:https://review.docs.netapp.com/us-en/workload-fsx-ontap_wa-updates/change-tiering-policy.html["階層化ポリシーを変更する"]。
+切り替え後のターゲットボリュームのlink:https://docs.netapp.com/us-en/workload-fsx-ontap/change-tiering-policy.html["階層化ポリシーを変更する"]。

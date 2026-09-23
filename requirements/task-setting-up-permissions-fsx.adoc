@@ -4,7 +4,7 @@ permalink: requirements/task-setting-up-permissions-fsx.html
 keywords: fsx for ontap, iam, user role, permissions, credentials 
 summary: FSx for ONTAP作業環境を作成または管理するには、NetApp コンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetApp Consoleに AWS 認証情報を追加する必要がNetApp Console。 
 ---
-= FSx for ONTAPの権限を設定する
+= Amazon FSx for NetApp ONTAP の権限を設定する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

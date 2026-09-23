@@ -4,7 +4,7 @@ permalink: use/task-monitor-operations.html
 keywords: monitor jobs, track jobs, monitor, track, NetApp Console 
 summary: NetApp Consoleの Tracker を使用して、FSx for ONTAP操作を追跡し、操作の進行状況を監視します。 
 ---
-= NetApp Consoleの Tracker を使用して FSx for ONTAP操作を監視する
+= Trackerを使用してAmazon FSx for NetApp ONTAP の操作を監視する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

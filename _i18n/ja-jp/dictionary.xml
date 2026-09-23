@@ -89,7 +89,6 @@
   <block id="8cb8a166d04bec88a46718a93a0dbae2" category="inline-link">NetApp Consoleの法的通知</block>
   <block id="195b8adb08947e4bd61959a821198877" category="paragraph"><block ref="195b8adb08947e4bd61959a821198877" category="inline-link-rx"></block></block>
   <block id="bd88f5d8a1d52ec005c5976780f565ab" category="summary">FSx for ONTAP作業環境を作成または管理するには、NetApp コンソールから FSx for ONTAPシステムを作成するために必要な権限を付与する IAM ロールの ARN を指定して、 NetApp Consoleに AWS 認証情報を追加する必要がNetApp Console。</block>
-  <block id="8fad3d94a3385eeb6406613f49896cdd" category="doc">FSx for ONTAPの権限を設定する</block>
   <block id="13f9bf1ee7de953172b557e8312ec6e4" category="section-title">AWS認証情報が必要な理由</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">タスク概要</block>
   <block id="d396bcde35d40ba871e0e0c3704be40c" category="paragraph">新しい AWS 認証情報と既存の AWS 認証情報は、*認証情報* ページの管理メニューから表示できます。</block>
@@ -437,7 +436,6 @@
   <block id="b49fadafd6f71d37744771f81d0895ed" category="list-text">ストレージ内の FSx for ONTAPから、3 つのドットのメニューを選択し、*削除* を選択します。</block>
   <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">削除を確認するには、[*削除*] を選択します。</block>
   <block id="82d112df39f74e9fcdd66e0e6d5aa12b" category="summary">NetApp Consoleで FSx for ONTAPシステムを作成または検出すると、ファイルシステムを管理し、バックアップやリカバリなどの機能を提供するNetAppデータ サービスを使用できるようになります。</block>
-  <block id="3d524a57e639824787f68c6f88019427" category="doc">NetApp Consoleで FSx for ONTAPファイルシステムを管理する</block>
   <block id="2ec8c048ff53a4cbdbdfc16422f78635" category="paragraph">NetApp Consoleで FSx for ONTAPシステムを作成または検出した後、ボリュームの作成、ストレージ VM の管理、データの保護、ファイル システムの管理を行うことで、ファイル システムを管理できます。コンソールを使用すると、バックアップとリカバリ、データ分類、データ同期などの機能を提供するデータ サービスも使用できます。</block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">ONTAP System Managerを使用してファイルシステムを管理する</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Amazon CloudFormation を使用してファイルシステムを管理する</block>
@@ -475,7 +473,6 @@
   <block id="a1eefe5e0a806535abe58cb68a54c9d1" category="paragraph">すべてのユースケースにおいて、長期保存用にスナップショットを有効にすると、デフォルトのレプリケーション ポリシーは _MirrorAndVault_ になります。</block>
   <block id="181b737a36ca59661f38fe5373437f6a" category="list-text">*階層化ポリシー*: ターゲット ボリュームに保存されているデータの階層化ポリシーを選択します。階層化ポリシーは、選択したユースケースに推奨される階層化ポリシーにデフォルト設定されます。</block>
   <block id="b3e9c4cd60af78168e1dfa0923b34db0" category="inline-link-macro">ボリュームストレージ容量</block>
-  <block id="78e26b4f42ff9572ff33a0dbb9094105" category="paragraph">_バランス (自動)_ は、Workload Factory コンソールを使用してボリュームを作成するときのデフォルトの階層化ポリシーです。ボリューム階層化ポリシーの詳細については、以下を参照してください。<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSx for NetApp ONTAPドキュメント。ワークロード ファクトリーは、ワークロード ファクトリー コンソールで階層化ポリシーにユースケース ベースの名前を使用し、括弧内に FSx for ONTAP階層化ポリシー名を含めることに注意してください。</block>
   <block id="538da000f69d1359c086e0483675390f" category="paragraph">移行ユースケースを選択した場合、Workload Factory はソース ボリュームの階層化ポリシーをターゲット ボリュームにコピーすることを自動的に選択します。階層化ポリシーのコピーの選択を解除し、レプリケーション対象として選択したボリュームに適用する階層化ポリシーを選択できます。</block>
   <block id="c0fb38c08c1fe26c6d51d93cc15693b0" category="list-text">*最大転送速度*: *制限* を選択し、最大転送制限を MB/秒単位で入力します。または、「*無制限*」を選択します。</block>
   <block id="c498491de58eb1c7c7b811d5555b1afc" category="paragraph">制限がないと、ネットワークとアプリケーションのパフォーマンスが低下する可能性があります。あるいは、災害復旧を主目的として使用するような重要なワークロードの場合、FSx for ONTAPファイル システムに無制限の転送速度を使用することをお勧めします。</block>
@@ -494,7 +491,6 @@
   <block id="26a9c35f8624cf9588da9df5229f10ce" category="inline-link-macro">NetApp Volume Cachingを使い始める</block>
   <block id="5b34ea6dcfe077d49a31cc3cf5e250cb" category="paragraph"><block ref="5b34ea6dcfe077d49a31cc3cf5e250cb" category="inline-link-macro-rx"></block></block>
   <block id="07dbd84dc76e5f414150543e3621c88a" category="summary">NetApp Consoleの Tracker を使用して、FSx for ONTAP操作を追跡し、操作の進行状況を監視します。</block>
-  <block id="6041f961f7067357d8feb45a6180d001" category="doc">NetApp Consoleの Tracker を使用して FSx for ONTAP操作を監視する</block>
   <block id="26fdc2ed771e04e56f2a9961462dec97" category="paragraph">NetApp Consoleの Tracker を使用して、FSx for ONTAP操作の実行を監視および追跡し、ジョブの進行状況を監視します。</block>
   <block id="13bdc4d0deb3d8b5a245f65276234a2c" category="paragraph">NetApp Consoleには、ジョブ監視機能の Tracker が用意されており、資格情報、FSx for ONTAP、リンク操作の進行状況とステータスを監視および追跡したり、操作タスクとサブタスクの詳細を確認したり、問題や障害を診断したりできます。</block>
   <block id="6092aff2fd96382c8039bf4b05f69f42" category="paragraph">Tracker ではいくつかのアクションが利用できます。ジョブを期間 (過去 24 時間、7 日間、14 日間、または 30 日間)、ワークロード、ステータス、ユーザーでフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブ テーブルを CSV ファイルとしてダウンロードしたりできます。トラッカーはいつでも更新できます。また、失敗した操作をすぐに再試行したり、失敗した操作のパラメータを編集して操作を再試行したりすることもできます。</block>
@@ -530,7 +526,6 @@
   <block id="9ee78825a71be6f2186eeff17cc5bced" category="paragraph">ボリューム作成などの操作ページにリダイレクトされ、そこでパラメータを編集して操作を再試行できます。</block>
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作が再開されます。操作のステータスを表示するには、トラッカーに移動してください。</block>
   <block id="bb918533d77dbb5a00111eac934ac64a" category="summary">NetApp Consoleのプロジェクトから FSx for ONTAPファイル システムを削除します。</block>
-  <block id="d53d3a848ddd1dfe6133b3d5925c0fda" category="doc">プロジェクトから FSx for ONTAPファイルシステムを削除する</block>
   <block id="eed3f02d8949620862afeddee99a07d8" category="paragraph">NetApp Consoleのプロジェクトから FSx for ONTAPファイル システムを削除します。この操作により、ファイル システムと 1 つのプロジェクトの関連付けが解除され、同じアカウント内の別のプロジェクトに関連付けることができるようになります。</block>
   <block id="7bded6d1c93c014e3bfcf6f8c957035f" category="paragraph">FSx for ONTAPファイル システムをプロジェクトから削除すると、 NetApp Consoleからも削除されます。 FSx for ONTAPファイルシステムは削除されません。後で同じアカウント内から同じプロジェクトまたは別のプロジェクト内の FSx for ONTAPファイル システムを再検出できます。</block>
   <block id="1a360ffc89a3460e1b84b1fc3ffc90b4" category="list-text">ストレージ内の FSx for ONTAPから、3 つのドット メニューを選択し、*プロジェクトから削除* を選択します。</block>
@@ -711,7 +706,6 @@
   <block id="353d7ff4a3d58ad1fe8ef0ad6acab574" category="paragraph">NetApp Workload Factory は、ストレージ VM の移行をサポートするようになりました。この機能により、オンプレミス ONTAP システムまたは第一世代の FSx for ONTAP ファイルシステムから第二世代の FSx for ONTAP ファイルシステムへ、ONTAP ストレージシステムのデータと構成を移行できます。ストレージ VM のデータと構成設定を複製して、ダウンタイムとユーザーおよびアプリケーションの中断を最小限に抑えながら新しいファイルシステムに移動できます。</block>
   <block id="fb2a77c6756f10fcc139a51a83349d7f" category="inline-link-macro">レプリケーション関係を作成する</block>
   <block id="33039f37667143e740ae3514cd2b2eea" category="inline-link-macro">ストレージVMとその複製ボリュームをカットオーバーする</block>
-  <block id="a26acefb7c797c670c1c39de1408d5d6" category="doc">NetApp ConsoleでFSx for ONTAPにデータを複製</block>
   <block id="1b8db2e8955b459973ea9bfe988b7384" category="paragraph">レプリケーションは、地域災害からデータを保護し、ストレージ VM の移行をサポートします。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">ボリュームを作成する</block>
   <block id="0d2b6b8037148b2d54a1cf8b887418e7" category="paragraph">不変のファイルを含むソース ボリュームを複製する場合、ターゲット ボリュームとファイル システムは、ソース ボリュームの保持期間が終了するまでロックされたままになります。不変ファイル機能は、FSx for ONTAP ファイルシステムの<block ref="88d66b8875f0ded07f2f44fb2e4b70e3" category="inline-link-macro-rx"></block>ときに使用できます。</block>
@@ -797,7 +791,6 @@
   <block id="b33f176ae89f054db5b204e18e50bedb" category="list-text">ソースストレージVMにキャッシュボリュームが存在する場合は、キャッシュ関係（ONTAP FlexCache関係）を再作成します。</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">関連情報</block>
   <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">階層化ポリシーを変更する</block>
-  <block id="fc36a9d66532e35056304d11de6f9ae5" category="paragraph">切り替え後のターゲットボリュームの<block ref="aac2c10b4c8f9f85b27f6266bbf93855" category="inline-link-macro-rx"></block>。</block>
   <block id="e53b35d192f3743794b3e37a24c7e92c" category="paragraph">AWS 認証情報は、NetApp Console から FSx for ONTAP システムを作成および管理するために必要です。新しい認証情報を作成することも、既存の組織に認証情報を追加することもできます。認証情報を使用すると、NetApp Console から AWS リソースを管理できます。</block>
   <block id="1817603d4a287805c966d1fe5b8286a1" category="paragraph">クレデンシャルと権限は、NetApp Workload Factoryによって管理されます。Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステム上で実行されるVMware、EDA、およびデータベースワークロードの管理と改善を支援するために設計されたライフサイクル管理プラットフォームです。NetApp ConsoleとWorkload Factoryは、同じAWSクレデンシャルと権限のセットを使用します。_Storage_はWorkload Factoryのストレージ管理機能であり、FSx for ONTAPファイルシステムを作成および管理するために有効にしてクレデンシャルを追加する必要がある唯一の機能です。</block>
   <block id="063ec75c7bab602d59faa10e680ab3e3" category="paragraph">AWSクレデンシャルをNetApp Consoleに手動で追加することで、使用するワークロード機能を管理するための権限と、アカウントに割り当てられているIAMロールをアカウントに付与できます。</block>
@@ -835,5 +828,16 @@
   <block id="fabdd77b146b0b5f04616afb10561fb8" category="admonition">長期保存には、ソースラベルとターゲットラベルの一致が必要です。ご希望であれば、Workload Factory が不足しているラベルを作成することも可能です。</block>
   <block id="015e6ecffa9ac033df81ffa6004a8511" category="list-text">*既存のポリシーを選択*：既存のポリシーを選択します。</block>
   <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026年7月15日</block>
-  <block id="911a94d5dfd3459887baca73e6590302" category="paragraph">&lt;stdin&gt; の未解決のディレクティブ - include::.._whatsnew/2026-07-15.adoc[]</block>
+  <block id="25b96777bfadb381f78f25912d595183" category="doc">NetApp Consoleの法的通知</block>
+  <block id="11af821352757a268574230f2a123a79" category="doc">Amazon FSx for NetApp ONTAP の権限を設定する</block>
+  <block id="f500b12ed4ebc5367419db58198f8fac" category="doc">Amazon FSx for NetApp ONTAP のヘルプ</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="doc">NetAppサポートにお客様のアカウントを登録します</block>
+  <block id="5b1a8b485dfc95e21b8e18a7df766854" category="doc">Amazon FSx for NetApp ONTAP ファイルシステムの作成または検出</block>
+  <block id="9ec8a9f187481631b67157753c41fdb1" category="doc">Amazon FSx for NetApp ONTAP ファイルシステムの削除</block>
+  <block id="8664f94d8b2b3bb84ff27a1b6f4d454d" category="doc">Amazon FSx for NetApp ONTAP ファイルシステムの管理</block>
+  <block id="78507cf4f441117a5c21cd08a87c06b5" category="doc">Trackerを使用してAmazon FSx for NetApp ONTAP の操作を監視する</block>
+  <block id="dd95565fdf03d756422df4216067b472" category="doc">Amazon FSx for NetApp ONTAP ファイルシステムをプロジェクトから削除する</block>
+  <block id="edd9b651163313031882b1c38ec03792" category="doc">Amazon FSx for NetApp ONTAP を使用したデータのレプリケーション</block>
+  <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">Workload Factory コンソールを使用してボリュームを作成する場合、デフォルトの階層化ポリシーは「バランス型（自動）」です。ボリューム階層化ポリシーの詳細については、AWS FSx for NetApp ONTAP ドキュメントの<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>を参照してください。Workload Factory は、階層化ポリシーに Workload Factory コンソールでユースケースベースの名前を使用しており、FSx for ONTAP の階層化ポリシー名は括弧内に記載されています。</block>
+  <block id="c09808c9c6aa7961a8051c74e6c9def1" category="paragraph">切り替え後のターゲットボリュームの<block ref="e0c6b7f121093601ef05ca7413d94a77" category="inline-link-macro-rx"></block>。</block>
 </blocks>
